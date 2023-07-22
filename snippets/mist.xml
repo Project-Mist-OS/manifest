@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Github -->
+  <remote  name="github"
+           fetch="https://github.com/" />
+
+  <!-- Projects -->
+  <remote name="mist" 
+          fetch="https://github.com/Project-Mist-OS"
+          revision="13.1" />
+
+  <!-- GitHub -->
+  <remote  name="old"
+           fetch="https://github.com/Project-Mist-OS"
+           revision="12.1" />
+
+  <remote  name="arrow"
+           fetch="https://github.com/ArrowOS"
+           review="https://review.arrowos.net/"
+           revision="refs/heads/arrow-13.0" />
+
+  <remote name="pixel-gitlab"
+          fetch="https://gitlab.pixelexperience.org/android"
+          revision="thirteen-qpr3" />
+
+  <!-- Rootdir -->
+  <project path="bionic" name="bionic" remote="mist" />
+  <project path="manifest" name="manifest" remote="mist" />
+
+  <!-- Build -->
+  <project path="build/make" name="build" remote="mist" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" remote="mist" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <!-- Device -->
+  <project path="device/mist/sepolicy" name="device_mist_sepolicy" remote="mist" />
+  <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" remote="mist" />
+  <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" remote="mist" />
+  <project path="device/qcom/sepolicy-legacy" name="device_qcom_sepolicy" groups="qcom,pdk-qcom" revision="twelve-legacy" remote="old" />
+  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy" groups="qcom,pdk-qcom" revision="twelve-legacy-um" remote="old" />
+  <project path="device/qcom/sepolicy_vndr-legacy-um" name="device_qcom_sepolicy_vndr-legacy-um" remote="mist" />
+
+  <!-- Extrernal -->
+  <project path="external/selinux" name="external_selinux" remote="mist" />
+  <project path="external/tinycompress" name="external_tinycompress" remote="mist" />
+  <project path="external/piex" name="external_piex" remote="mist" />
+  <project path="external/tigervnc" name="LMODroid/platform_external_tigervnc" groups="pdk" revision="thirteen" remote="github" />
+  <project path="external/dwarves" name="external_dwarves" remote="mist" />
+
+  <!-- Frameworks -->
+  <project path="frameworks/av" name="frameworks_av"  remote="mist"/>
+  <project path="frameworks/base" name="frameworks_base" remote="mist" />
+  <project path="frameworks/native" name="frameworks_native" remote="mist" />
+  <project path="frameworks/libs/net" name="frameworks_libs_net" remote="mist" />
+  <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" remote="mist" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" remote="mist" />
+  <project path="frameworks/opt/net/ims" name="frameworks_opt_net_ims" remote="mist" />
+
+  <!-- Hardware -->
+  <project path="hardware/interfaces" name="hardware_interfaces" remote="mist" />
+  <project path="hardware/mist/interfaces" name="mist_interfaces" remote="mist" />
+  <project path="hardware/mist/compat" name="hardware_mist_compat" remote="mist" />
+  <project path="hardware/libhardware" name="misthardware_libhardware" remote="mist" />
+  <project path="hardware/xiaomi" name="hardware_xiaomi" remote="mist" />
+  <project path="hardware/qcom-caf/wlan" name="hardware_qcom_wlan" revision="tiramisu-caf" remote="mist" />
+
+  <!-- Packages (Resources) repos -->
+  <project path="packages/resources/devicesettings" name="packages_resources_devicesettings" remote="mist" />
+
+  <!-- Packages -->
+  <project path="packages/apps/Settings" name="packages_apps_Settings" remote="mist" />
+  <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" remote="mist" />
+  
+  <!-- System -->
+  <project path="system/core" name="system_core" remote="mist" />
+  <project path="external/fastrpc" name="external_fastrpc" remote="mist" />
+  <project path="system/libhidl" name="system_libhidl" remote="mist" />
+  <project path="system/libhwbinder" name="system_libhwbinder" remote="mist" />
+  <project path="system/logging" name="system_logging" remote="mist" />
+  <project path="system/netd" name="system_netd" remote="mist" />
+  <project path="system/media" name="system_media" remote="mist" />
+  <project path="system/security" name="system_security" remote="mist" />
+  <project path="system/sepolicy" name="system_sepolicy" remote="mist" />
+  <project path="system/tools/mkbootimg" name="system_tools_mkbootimg" remote="mist" />
+  <project path="system/update_engine" name="system_update_engine" remote="mist" />
+  <project path="system/vold" name="system_vold" remote="mist" />
+
+  <!-- Vendor -->
+  <project path="vendor/mist" name="vendor_mist" remote="mist" />
+  <project path="vendor/support" name="vendor_support" remote="mist" />
+  <project path="vendor/themes" name="vendor_themes" remote="mist" />
+  <project path="vendor/pixel-framework" name="vendor_pixel-framework" remote="mist" />
+  <project path="vendor/gms" name="vendor_gms" remote="mist-gitlab" clone-depth="1" />
+
+  <!-- Prebuilts -->
+  <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" remote="aosp" revision="refs/tags/android-13.0.0_r0.85" />
+
+  <!-- Vendor (Qcom) repos -->
+  <project path="vendor/qcom/opensource/commonsys-intf/display" name="vendor_qcom_opensource_display-commonsys-intf" groups="qcom,qssi" remote="mist" />
+  <project path="vendor/qcom/opensource/commonsys/display" name="vendor_qcom_opensource_display-commonsys" groups="qcom,qssi" remote="mist" />
+  <project path="vendor/qcom/opensource/healthd-ext" name="ArrowOS/android_vendor_qcom_opensource_healthd-ext" revision="arrow-13.0" remote="github" />
+
+</manifest>
