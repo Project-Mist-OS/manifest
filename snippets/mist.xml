@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Github -->
+  <remote  name="github"
+           fetch="https://github.com/" />
+
+  <remote  name="gitlab"
+           fetch="https://gitlab.com/" />
+
+  <!-- Projects -->
+  <remote name="mist" 
+          fetch="https://github.com/Project-Mist-OS"
+          revision="14" />
+
+  <remote  name="derp-13"
+           fetch="https://github.com/DerpFest-AOSP"
+           revision="13" />
+
+ <project path="bionic" name="bionic" groups="pdk" remote="mist" />
+  <project path="manifest" name="manifest" remote="mist" />
+
+  <!-- Build -->
+  <project path="build/make" name="build" groups="pdk" remote="mist" >
+    <copyfile src="core/root.mk" dest="Makefile" />
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="mist" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+ <!-- Device -->
+  <project path="device/mist/sepolicy" name="device_mist_sepolicy" remote="mist" />
+  <project path="device/qcom/sepolicy" name="device_qcom_sepolicy" groups="qcom,qssi" remote="mist" />
+  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy" groups="qcom,sdm660" remote="mist" revision="13-legacy-um" />
+  <project path="device/qcom/sepolicy_vndr" name="device_qcom_sepolicy_vndr" groups="qcom,lahaina" remote="mist" />
+  <project path="device/qcom/sepolicy_vndr-legacy-um" name="device_qcom_sepolicy_vndr" groups="qcom,lahaina" remote="mist" revision="14-legacy-um" />
+
+  <!-- External -->
+  <project path="external/gptfdisk" name="external_gptfdisk" remote="mist" />
+  <project path="external/mksh" name="external_mksh" remote="mist" />  
+  <project path="external/tinycompress" name="external_tinycompress" groups="pdk" remote="mist" />
+  <project path="external/tinyxml" name="platform/external/tinyxml" groups="pdk" remote="aosp" revision="refs/tags/android-11.0.0_r46" />
+
+  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="mist" />
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="mist" />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="mist" />
+  <project path="frameworks/opt/colorpicker" name="frameworks_opt_colorpicker" groups="pdk-cw-fs,pdk-fs" remote="mist" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="mist" />
+  <project path="frameworks/opt/timezonepicker" name="frameworks_opt_timezonepicker" groups="pdk-cw-fs,pdk-fs" remote="mist" />
+  <project path="frameworks/opt/net/ims" name="frameworks_opt_net_ims" groups="frameworks_ims,pdk-cw-fs,pdk-fs" remote="mist" />
+
+  <!-- hardware repos -->
+  <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk" remote="mist" />
+  <project path="hardware/libhardware" name="hardware_libhardware" groups="pdk" remote="mist" />
+  <project path="hardware/mist/compat" name="hardware_mist_compat" remote="mist" />
+  <project path="hardware/qcom-caf/bootctrl" name="hardware_qcom_bootctrl" groups="qcom,waipio-vendor" remote="mist" revision="13-caf" />
+  <project path="hardware/qcom-caf/common" name="hardware_qcom-caf_common" groups="qcom" remote="mist" >
+    <!-- add guard for AOSP hardware/qcom dir -->
+    <linkfile src="os_pickup_aosp.mk" dest="hardware/qcom/Android.mk" />
+    <!-- add guards for CAF repositories -->
+    <linkfile src="os_pickup.bp" dest="hardware/qcom-caf/msm8998/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/msm8998/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sdm845/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sdm845/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8150/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8150/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8250/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8250/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8350/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8350/Android.mk" />
+    <linkfile src="os_pickup_audio-ar.mk" dest="hardware/qcom-caf/sm8450/audio/Android.mk" />
+    <linkfile src="os_pickup_qssi.bp" dest="hardware/qcom-caf/sm8450/Android.bp" />
+    <linkfile src="os_pickup.mk" dest="hardware/qcom-caf/sm8450/Android.mk" />
+    <!-- add guards for Pixel kernel modules -->
+    <linkfile src="os_pickup.bp" dest="kernel/google/gs101/private/google-modules/Android.bp" />
+    <linkfile src="os_pickup.bp" dest="kernel/google/gs201/private/google-modules/Android.bp" />
+  </project>
+  <project path="hardware/qcom/audio" name="DerpFest-AOSP/hardware_qcom_audio" groups="qcom,qcom_audio,pdk-qcom" remote="github" revision="14" />
+  <project path="hardware/qcom/camera" name="DerpFest-AOSP/hardware_qcom_camera" groups="qcom_camera,pdk-qcom" remote="github" revision="14" />
+  <project path="hardware/qcom/data/ipacfg-mgr" name="DerpFest-AOSP/hardware_qcom_data_ipacfg-mgr" groups="qcom,pdk-qcom" remote="github" revision="14" />
+  <project path="hardware/qcom/display" name="DerpFest-AOSP/hardware_qcom_display" groups="pdk-qcom,qcom,qcom_display" remote="github" revision="14" />
+  <project path="hardware/qcom/gps" name="DerpFest-AOSP/hardware_qcom_gps" groups="qcom,qcom_gps,pdk-qcom" remote="github" revision="14" />
+  <project path="hardware/qcom/media" name="DerpFest-AOSP/hardware_qcom_media" groups="qcom,pdk-qcom" remote="github" revision="14" />
+  <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" groups="qcom_wlan,pdk-qcom" remote="mist" />
+  <project path="hardware/qcom-caf/bt" name="DerpFest-AOSP/hardware_qcom-caf_bt" groups="qcom,legacy-qcom" remote="github" revision="13" />
+  <project path="hardware/qcom-caf/msm8998/audio" name="DerpFest-AOSP/hardware_qcom_audio" groups="qcom,legacy-qcom" remote="github" revision="14-caf-msm8998" />
+  <project path="hardware/qcom-caf/msm8998/display" name="DerpFest-AOSP/hardware_qcom_display" groups="qcom,legacy-qcom" remote="github" revision="14-caf-msm8998" />
+  <project path="hardware/qcom-caf/msm8998/media" name="DerpFest-AOSP/hardware_qcom_media" groups="qcom,legacy-qcom" remote="github" revision="14-caf-msm8998" />
+  <project path="hardware/qcom-caf/sdm845/audio" name="DerpFest-AOSP/hardware_qcom_audio" groups="qcom,sdm845" remote="github" revision="14-caf-sdm845" />
+  <project path="hardware/qcom-caf/sdm845/display" name="DerpFest-AOSP/hardware_qcom_display" groups="qcom" remote="github" revision="14-caf-sdm845" />
+  <project path="hardware/qcom-caf/sdm845/media" name="DerpFest-AOSP/hardware_qcom_media" groups="qcom,sdm845" remote="github" revision="14-caf-sdm845" />
+  <project path="hardware/qcom-caf/sm8150/audio" name="DerpFest-AOSP/hardware_qcom_audio" groups="qcom,msmnile" remote="github" revision="14-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8150/display" name="DerpFest-AOSP/hardware_qcom_display" groups="qcom" remote="github" revision="14-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8150/media" name="DerpFest-AOSP/hardware_qcom_media" groups="qcom,msmnile" remote="github" revision="14-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8250/audio" name="DerpFest-AOSP/hardware_qcom_audio" groups="qcom,kona" remote="github" revision="14-caf-sm8250" />
+  <project path="hardware/qcom-caf/sm8250/display" name="DerpFest-AOSP/hardware_qcom_display" groups="qcom" remote="github" revision="14-caf-sm8250" />
+  <project path="hardware/qcom-caf/sm8250/media" name="DerpFest-AOSP/hardware_qcom_media" groups="qcom,kona" remote="github" revision="14-caf-sm8250" />
+  <project path="hardware/qcom-caf/sm8350/audio" name="DerpFest-AOSP/hardware_qcom_audio" groups="qcom,lahaina" remote="github" revision="14-caf-sm8350" />
+  <project path="hardware/qcom-caf/sm8350/display" name="DerpFest-AOSP/hardware_qcom_display" groups="qcom" remote="github" revision="14-caf-sm8350" />
+  <project path="hardware/qcom-caf/sm8350/media" name="DerpFest-AOSP/hardware_qcom_media" groups="qcom,lahaina" remote="github" revision="14-caf-sm8350" />
+  <project path="hardware/qcom-caf/sm8450/audio/agm" name="DerpFest-AOSP/vendor_qcom_opensource_agm" groups="qcom,waipio-vendor"  remote="github" revision="14-caf-sm8450" />
+  <project path="hardware/qcom-caf/sm8450/display" name="DerpFest-AOSP/hardware_qcom_display" groups="qcom"  remote="github" revision="14-caf-sm8450" />
+  <project path="hardware/qcom-caf/thermal" name="hardware_qcom_thermal" groups="qcom,waipio-vendor" remote="derp-13" />
+  <project path="hardware/qcom-caf/vr" name="hardware_qcom_vr" groups="qcom,sdm660" remote="derp-13" />
+  <project path="hardware/qcom-caf/wlan" name="DerpFest-AOSP/hardware_qcom_wlan" groups="qcom,waipio-vendor" remote="github" revision="13-caf" />
+  <project path="hardware/ril" name="DerpFest-AOSP/hardware_ril" groups="pdk" remote="github" revision="14"/>
+
+  <!-- Packages -->
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="mist" />
+  <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" groups="pdk-fs" remote="mist" />
+  <project path="packages/apps/SimpleDeviceConfig" name="ProtonAOSP/android_packages_apps_SimpleDeviceConfig" groups="pdk-fs" remote="github" revision="sc-qpr3" />
+  <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" groups="pdk-fs" remote="mist" />
+  <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" groups="pdk-fs" remote="mist" />
+  <project path="packages/modules/adb" name="packages_modules_adb" groups="pdk" remote="mist" />
+  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk-cw-fs,pdk-fs" remote="mist" />
+  <project path="packages/modules/Permission" name="packages_modules_Permission" groups="pdk-cw-fs,pdk-fs" remote="mist" />
+  <project path="packages/modules/Wifi" name="packages_modules_Wifi" groups="pdk-cw-fs,pdk-fs" remote="mist" />
+  <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" groups="pdk-cw-fs,pdk-fs" remote="mist" />
+  <project path="packages/resources/devicesettings" name="packages_resources_devicesettings" groups="pdk-fs" remote="mist" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="mist" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="mist" />
+
+  <!-- System -->
+  <project path="system/core" name="system_core" groups="pdk" remote="mist" />
+  <project path="system/extras" name="system_extras" groups="pdk" remote="mist" />
+  <project path="system/libhidl" name="system_libhidl" groups="pdk" remote="mist" />
+  <project path="system/libsysprop" name="system_libsysprop" groups="pdk" remote="mist" />
+  <project path="system/logging" name="system_logging" groups="pdk" remote="mist" />
+  <project path="system/media" name="system_media" groups="pdk" remote="mist" />
+  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="mist" />
+  <project path="system/tools/mkbootimg" name="system_tools_mkbootimg" groups="pdk" remote="mist" />
+  <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="mist" />
+
+  <!-- Vendor -->
+  <project path="vendor/codeaurora/telephony" name="DerpFest-AOSP/vendor_codeaurora_telephony" groups="qcom,qssi" remote="github" revision="14" />
+  <project path="vendor/mist" name="vendor_mist" remote="mist" />
+  <project path="vendor/fontage" name="vendor_fontage" remote="derp-13" />
+  <project path="vendor/gms" name="DerpFest/vendor_gms" remote="gitlab" revision="14" clone-depth="1" />
+  <project path="vendor/qcom/opensource/audio-hal/st-hal" name="vendor_qcom_opensource_audio-hal_st-hal" groups="qcom,lahaina" remote="derp-13" />
+  <!-- project path="vendor/qcom/opensource/commonsys-intf/bluetooth" name="vendor_qcom_opensource_commonsys-intf_bluetooth" groups="qcom,pdk-qcom" remote="mist" / -->
+  <project path="vendor/qcom/opensource/commonsys-intf/display" name="vendor_qcom_opensource_commonsys-intf_display" groups="qcom,qssi" remote="derp-13" />
+  <!-- project path="vendor/qcom/opensource/commonsys/bluetooth_ext" name="vendor_qcom_opensource_commonsys_bluetooth_ext" groups="qcom,pdk-qcom" remote="mist" / -->
+  <project path="vendor/qcom/opensource/commonsys/display" name="vendor_qcom_opensource_commonsys_display" groups="qcom,qssi" remote="derp-13" />
+  <!-- project path="vendor/qcom/opensource/commonsys/packages/apps/Bluetooth" name="vendor_qcom_opensource_commonsys_packages_apps_Bluetooth" groups="qcom,pdk-qcom" remote="mist" />
+  <project path="vendor/qcom/opensource/commonsys/system/bt" name="vendor_qcom_opensource_commonsys_system_bt" groups="qcom,pdk-qcom" remote="mist" / -->
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr" name="DerpFest-AOSP/vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,waipio-vendor" remote="github" revision="14" />
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um" name="DerpFest-AOSP/vendor_qcom_opensource_data-ipa-cfg-mgr" groups="qcom,lahaina" remote="github" revision="14-legacy-um" />
+  <project path="vendor/qcom/opensource/dataservices" name="vendor_qcom_opensource_dataservices" groups="qcom,waipio-vendor" remote="derp-13" />
+  <project path="vendor/qcom/opensource/display" name="vendor_qcom_opensource_display" groups="qcom" remote="derp-13" />
+  <project path="vendor/qcom/opensource/fm-commonsys" name="vendor_qcom_opensource_fm-commonsys" groups="qcom,qssi" remote="derp-13" />
+  <project path="vendor/qcom/opensource/interfaces" name="vendor_qcom_opensource_interfaces" groups="qcom,qssi" remote="derp-13" />
+  <project path="vendor/qcom/opensource/power" name="vendor_qcom_opensource_power" groups="qcom,waipio-vendor" remote="derp-13" />
+  <project path="vendor/qcom/opensource/thermal-engine" name="vendor_qcom_opensource_thermal-engine" groups="qcom,waipio-vendor" remote="derp-13" />
+  <project path="vendor/qcom/opensource/usb" name="vendor_qcom_opensource_usb" groups="qcom,waipio-vendor" remote="derp-13" />
+  <project path="vendor/qcom/opensource/vibrator" name="vendor_qcom_opensource_vibrator" groups="qcom,waipio-vendor" remote="derp-13" />
+  <project path="vendor/qcom/opensource/wfd-commonsys" name="vendor_qcom_opensource_wfd-commonsys" groups="qcom,waipio-video" remote="derp-13" />
+
+</manifest>
