@@ -11,7 +11,7 @@ To set up your build environment and sync Mist, please follow this guide: [Link]
 **To initialize your local repository using the AOSP/CAF based Mist source, use a command like this:**
 
 ```bash
-repo init -u https://github.com/Project-Mist-OS/manifest -b 14
+repo init -u https://github.com/Project-Mist-OS/manifest -b cp
 ```
 **Sync up with this command:**
 ```bash
@@ -50,6 +50,7 @@ Here's my thanks to people who made this possible:
 * BootleggersROM
 * CyanogenMod/LineageOS
 * CherishOS
+* CipherOS
 * DirtyUnicorns
 * DerpFest-AOSP
 * NitrogenOS
@@ -62,7 +63,9 @@ Here's my thanks to people who made this possible:
 * RiceDroid
 * ShapeShiftOS
 * Syberia Project
+* tequilaOS
 * YAAP
+ And Many More
 
 Using our assets
 ---------------

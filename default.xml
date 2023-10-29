@@ -1267,6 +1267,5 @@
   <!-- Mist OS Manifest -->
   <include name="snippets/remove.xml" />
   <include name="snippets/mist.xml" />
-  <include name="snippets/lineage.xml" />
 
 </manifest>
