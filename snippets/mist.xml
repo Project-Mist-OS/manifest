@@ -78,7 +78,7 @@
 
   <!-- Packages -->
   <!--project path="packages/apps/Contacts" name="packages_apps_Contacts" remote="mist" /-->
-  <project path="packages/apps/DesktopMode" name="LMODroid/platform_packages_apps_DesktopMode" groups="pdk-fs" revision="thirteen" remote="github" />
+  <!--<project path="packages/apps/DesktopMode" name="LMODroid/platform_packages_apps_DesktopMode" groups="pdk-fs" revision="thirteen" remote="github" />
   <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="mist" />
   <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="mist" /> -->
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="mist" />
