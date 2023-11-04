@@ -84,7 +84,7 @@
 
   <!-- External -->
   <remove-project name="platform/external/cronet" />
-  <remove-project name="platform/external/dtc" />
+ <!--  <remove-project name="platform/external/dtc" /> -->
   <remove-project name="platform/external/exfatprogs" />
   <remove-project name="platform/external/gptfdisk" />
   <remove-project name="platform/external/libcxx" />
