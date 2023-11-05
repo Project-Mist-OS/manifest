@@ -1,151 +1,84 @@
-![Cherish](assets/cherish.png)
-# <b> <i> CherishOS | Built with </i>💖
+![Mist](https://github.com/Project-Mist-OS/manifest/blob/13.1/assets/Banner2.jpg)
+# <b> <i> MistOS | Built with </i>💖
 
-Credits:
-=======
- * [**AOSP**](https://android.googlesource.com)
- * [**LineageOS**](https://github.com/LineageOS)
- * [**Nitrogen-Project**](https://github.com/nitrogen-project)
- * [**PixelExperience**](https://github.com/PixelExperience)
+---------------
 
-And other ROMs 
-----------------------------------------------------------------------------
+Getting Started
+---------------
 
-Getting Started:
-==============
+To get started with Android, you'll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
+To set up your build environment and sync Mist, please follow this guide: [Link](https://raw.githubusercontent.com/nathanchance/android-tools/main/guides/building_aosp.txt)
 
-To get started with the building process, you'll need to get familiar with [Git and Repo](http://source.android.com/source/using-repo.html).
-
-Install the build packages:
-===============
-
-Install JDK 8:
+**To initialize your local repository using the AOSP/CAF based Mist source, use a command like this:**
 
 ```bash
- sudo apt install openjdk-8-jdk
+   repo init -u https://github.com/Project-Mist-OS/manifest -b 14
 ```
-
-Tested on Ubuntu 16.04,16.10,17.04,18.04,18.10,19.04,21.04:
-
+**Sync up with this command:**
 ```bash
- sudo apt install bc bison build-essential ccache curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev
+   repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
 ```
-Tested on Ubuntu 20.04 
+
+Building the source
+---------------
+
+The source at MistOS is well configured for building.
+
+**Initiate the build with:**
+```bash
+   . build/envsetup.sh
+```
+**Prepare your device with:**
 ```bash 
-     sudo apt install bc bison build-essential ccache curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5-dev libncurses5 libsdl1.2-dev libssl-dev libwxgtk3.0-gtk3-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev
+   lunch mist_$device-user
 ```
-### Getting the source
-- Making required directories
-- Obtaining the repo binary
-- Adding repo binary to your path
-- Giving the repo binary proper permissions
-- Initializing an empty repo
-- Syncing the repo
-
-Alright, so now we’re getting there. I have outlined the basics of what we’re about to do and broke them down as I know them. This is all pretty much going to be copy/paste so it’ll be fairly difficult to screw this up :)
-
-##### Make directory for the repo binary
-```bash 
-     mkdir ~/bin
-```
-##### Add directory for the repo binary to its path
-```bash 
-     PATH=~/bin:$PATH
-```
-##### Downloading repo binary and placing it in the proper directory
-
- ```bash 
- curl http://commondatastorage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
- ```
-
-##### Giving the repo binary the proper permissions
-```bash 
-    chmod a+x ~/bin/repo
- ```     
-To initialize your local repository, use a command like this:
-
+**Then fire it off with:**
 ```bash
-    repo init -u https://github.com/CherishOS/android_manifest.git -b udc
+   mka bacon
 ```
 
-Then to sync up:
-================
+Thanks section
+---------------
 
-```bash
-    repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
-```
-Compilation of Cherish OS:
-====================
+Here's my thanks to people who made this possible:
 
-From root directory of Project, perform following commands in terminal
+* ABC
+* AICP
+* AOSiP
+* AOSPA
+* ArrowOS
+* Bianca Project
+* BootleggersROM
+* CyanogenMod/LineageOS
+* CherishOS
+* CipherOS
+* DirtyUnicorns
+* DerpFest-AOSP
+* NitrogenOS
+* Nusantara-ROM
+* OmniROM
+* PixelExperience
+* POSP
+* Project Fluid
+* Project Kaleidoscope
+* RiceDroid
+* ShapeShiftOS
+* Syberia Project
+* tequilaOS
+* YAAP
+ And Many More
 
+Using our assets
+---------------
 
-```bash
-. build/envsetup.sh
- brunch device-codename
-```
- -----------------------------------------------------------------------------
+**Code**
 
-Important for Smart Pixel AOD
-====================
- 
-### Add it in overlay/frameworks/base/core/res/res/values/config.xml
-```bash
-<!-- Whether the device supports Smart Pixels -->
-<bool name="config_supportSmartPixels">true</bool>
-```
+Our codebase is licensed under Apache License, Version 2.0 unless otherwise specified. Apache License 2.0 allows a variety of actions on the content as long as licensing and copyright notices are retained and included with the code and your changes to the codebase are stated.
 
-Important for some devices
-====================
- 
-### Also set this flag in device tree cherish_device.mk 
-```bash
-    # FOD animations
-    EXTRA_UDFPS_ANIMATIONS := true
-```
+You can read the full license text at http://www.apache.org/licenses/LICENSE-2.0
 
-### Add it in overlay/frameworks/base/core/res/res/values/config.xml 
-```bash
-<!-- Whether to show min/max refresh rate in display settings -->
-    <bool name="config_show_refresh_rate_controls">true</bool>
-    <bool name="config_supports_dynamic_refresh_rate_controls">true</bool>
-```
+**Images & other assets**
 
-### Night Light FOD
-```bash
-<!-- Night Light FOD -->
-    <bool name="disable_fod_night_light">true</bool>
-```
- 
-### Pocket Lock
-```bash
-<!-- Pocket Lock -->
-    <bool name="config_pocketModeSupported">true</bool>
-```
+Unless otherwise specified, all out assets, including but not limited to images, are licensed under Creative Commons Attribution-NonCommercial 4.0 International, or CC BY-NC 4.0 for short. This means that you are allowed to modify the aforementioned assets in any way you want and you are free to share the originals and/or the modified work. However, you are not allowed to use the assets for commercial purposes and you must provide attribution at all times which means you have to include a short note about the license used (CC BY-NC 4.0), the original author/authors (DerpFest) and inform about any changes that have been made. A link to the website ( derpfest.org ) should usually be included as well.
 
-Battery Health
-====================
-### Add overlay/packages/apps/Settings/res/values/config.xml
-```bash
-<!-- Battery health -->
-    <bool name="config_supportBatteryHealth">true</bool>
-    <string name="config_batteryCalculatedCapacity">/sys/class/power_supply/bms/charge_full</string>
-    <string name="config_batteryDesignCapacity">/sys/class/power_supply/bms/charge_full_design</string>
-    <string name="config_batteryChargeCycles">/sys/class/power_supply/bms/cycle_count</string>
-```
-
-### Add sepolicy/vendor/system_app.te
-```bash
-# allow system apps to read battery status
-r_dir_file(system_app, sysfs_battery_supply)
-```
------------------------------------------------------------------------------
-
-Apply for Official Maintainership
-====================
-You can apply for officialy maintaining the ROM for your device.
-
-https://forms.gle/BWg1mPxHNv2W8eK79
-
-### <b> <i> XDA Template </i> ###
-[Template](assets/xda.md)
+You can reach the full legal text at http://creativecommons.org/licenses/by-nc/4.0/
