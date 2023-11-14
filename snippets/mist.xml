@@ -19,9 +19,9 @@
   <remote  name="gitlab"
            fetch="https://gitlab.com/" />
 
-  <remote name="pixel-gitlab"
-          fetch="https://gitlab.pixelexperience.org/android"
-          revision="fourteen" />
+  <remote name="mist-gitlab"
+          fetch="https://gitlab.com/ShukakuZa/"
+          revision="udc" />
 
   <!-- Rootdir -->
   <project path="art" name="art" remote="mist" />
@@ -126,7 +126,7 @@
   <project path="vendor/support" name="vendor_support" remote="mist" />
   <project path="vendor/themes" name="vendor_themes" remote="mist" />
   <!-- <project path="vendor/pixel-framework" name="vendor_pixel-framework" remote="mist" /> -->
-  <project path="vendor/gms" name="vendor_gms" remote="pixel-gitlab" clone-depth="1" />
+  <project path="vendor/gms" name="vendor_gms" remote="mist-gitlab" clone-depth="1" />
 
   <!-- Prebuilts -->
   <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" remote="aosp" revision="refs/tags/android-14.0.0_r0.8" />
