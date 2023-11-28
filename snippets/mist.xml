@@ -83,6 +83,8 @@
   <project path="packages/apps/Dialer" name="packages_apps_Dialer" remote="mist" />
   <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="mist" /> -->
   <project path="packages/apps/Settings" name="packages_apps_Settings" remote="mist" />
+  <project path="packages/apps/ParanoidSense" name="packages_apps_ParanoidSense" remote="mist-gitlab" />
+
   <!-- <project path="packages/apps/FaceUnlockService" name="packages_apps_FaceUnlockService" remote="mist" />
   <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="mist" />
   <project path="packages/apps/Messaging" name="packages_apps_Messaging" remote="mist" /> -->
