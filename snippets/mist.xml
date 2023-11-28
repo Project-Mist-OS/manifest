@@ -98,6 +98,8 @@
 
 
   <!-- Packages (Modules) -->
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="mist" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="mist" />
   <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" remote="mist" />
   <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" remote="mist" />
   <project path="packages/modules/Permission" name="packages_modules_Permission"  remote="mist" />
