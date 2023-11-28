@@ -94,6 +94,8 @@
   <project path="packages/apps/RepainterServicePriv" name="kdrag0n/android_packages_apps_RepainterServicePriv" remote="github" revision="main" />
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" remote="mist" />
   <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" remote="mist" /--> 
+  <project path="packages/apps/TouchGestures" name="packages_apps_TouchGestures" remote="mist" /> 
+
 
   <!-- Packages (Modules) -->
   <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" remote="mist" />
@@ -132,4 +134,5 @@
 
   <!-- Prebuilts -->
   <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" remote="aosp" revision="refs/tags/android-14.0.0_r0.8" />
+  <project path="bootable/recovery" name="CherishOS/android_bootable_recovery" revision="udc" remote="github" />
   </manifest>
