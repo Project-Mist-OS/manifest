@@ -127,7 +127,7 @@
   <project path="system/vold" name="system_vold" remote="mist" />
 
   <!-- Vendor -->
-  
+  <project path="vendor/certification" name="vendor_certification" remote="mist-gitlab" />  
   <project path="vendor/mist" name="vendor_mist" remote="mist" />
   <project path="vendor/support" name="vendor_support" remote="mist" />
   <project path="vendor/themes" name="vendor_themes" remote="mist" />
