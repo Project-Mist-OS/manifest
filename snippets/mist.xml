@@ -99,18 +99,16 @@
 
 
   <!-- Packages (Modules) -->
-  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="mist" />
-  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="mist" />
   <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" remote="mist" />
-  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" remote="mist" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" remote="mist-gitlab" />
   <project path="packages/modules/Permission" name="packages_modules_Permission"  remote="mist" />
   <project path="packages/modules/Wifi" name="packages_modules_Wifi" remote="mist" />
   <project path="packages/modules/adb" name="packages_modules_adb" remote="mist" />
   <project path="packages/modules/common" name="packages_modules_common" remote="mist" />
 
   <!-- Packages (services) -->
-  <!-- <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="mist" />
-  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="mist" /> -->
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="mist" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" remote="mist" />
   <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" remote="mist" />
   <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" remote="mist" />
   <!-- <project path="packages/services/VncFlinger" name="LMODroid/platform_packages_services_VncFlinger" groups="pdk-cw-fs,pdk-fs" revision="thirteen" remote="github" />-->
@@ -129,6 +127,7 @@
   <project path="system/vold" name="system_vold" remote="mist" />
 
   <!-- Vendor -->
+  
   <project path="vendor/mist" name="vendor_mist" remote="mist" />
   <project path="vendor/support" name="vendor_support" remote="mist" />
   <project path="vendor/themes" name="vendor_themes" remote="mist" />
@@ -137,6 +136,5 @@
   <project path="vendor/gms" name="vendor_gms" remote="mist-gitlab" clone-depth="1" />
 
   <!-- Prebuilts -->
-  <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" remote="aosp" revision="refs/tags/android-14.0.0_r0.8" />
   <project path="bootable/recovery" name="CherishOS/android_bootable_recovery" revision="udc" remote="github" />
   </manifest>
