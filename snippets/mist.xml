@@ -181,4 +181,5 @@
   <project path="vendor/lineage" name="vendor_lineage" remote="mist" />
   <project path="vendor/mist" name="vendor_mist" groups="pdk-fs" remote="mist-lab" />
   <project path="vendor/official_devices" name="official_devices" remote="mist"  />
+  <project path="vendor/pixel-framework" name="android_vendor_pixel-framework" remote="rising" />
 </manifest>
