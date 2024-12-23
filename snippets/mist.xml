@@ -99,7 +99,7 @@
   <project path="bionic" name="bionic" groups="pdk" remote="mist" />
 
   <!-- Bootable  -->
-  <project path="bootable/recovery" name="android_bootable_recovery" groups="pdk" remote="rising" />
+  <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="mist" />
 
   <!-- Build  -->
   <project path="build/make" name="build" groups="pdk,sysui-studio" remote="mist" >
