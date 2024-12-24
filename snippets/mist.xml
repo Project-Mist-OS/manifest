@@ -90,7 +90,6 @@
 
   <!-- Android Manifest  -->
   <project path="manifest" name="manifest" remote="mist" />
-  <project path="risingOS_wiki" name="risingOS_wiki" remote="rising" />
 
   <!-- Art  -->
   <project path="art" name="art" groups="pdk" remote="mist" />
@@ -182,4 +181,5 @@
   <project path="vendor/mist" name="vendor_mist" groups="pdk-fs" remote="mist-lab" />
   <project path="vendor/official_devices" name="official_devices" remote="mist"  />
   <project path="vendor/pixel-framework" name="android_vendor_pixel-framework" remote="rising" />
+  <project path="Spoofing" name="vendor_Spoofing" remote="mist" />
 </manifest>
