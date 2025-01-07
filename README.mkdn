@@ -1,4 +1,4 @@
-![Mist](https://github.com/Project-Mist-OS/manifest/blob/13.1/assets/Banner2.jpg)
+![Mist](https://github.com/Project-Mist-OS/manifest/blob/15/assets/Banner.png)
 # <b> <i> MistOS | Built with </i>💖
 
 # This is Project-Mist-OS [Mist OS]
