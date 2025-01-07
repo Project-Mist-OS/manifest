@@ -37,6 +37,12 @@
            sync-j="4"
            revision="refs/heads/15.0" />
 
+   <remote name="mist-device"
+          fetch="https://github.com/MistOS-Devices"
+          sync-c="true"
+          sync-j="4"
+          revision="refs/heads/15" />
+
   <!-- Android Manifest  -->
   <!-- Art -->
   <remove-project path="art" />
@@ -115,7 +121,7 @@
   </project>
   
   <project path="build/release" name="android_build_release" groups="pdk,tradefed" remote="rising" />
-  <project path="mist-maintainers" name="mist-maintainers" remote="mist" />
+  <project path="mist-maintainers" name="mist-maintainers" remote="mist-device" />
 
   <!-- Device  -->
   <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="mist" />
@@ -178,7 +184,7 @@
   <project path="vendor/gms" name="android_vendor_gms" remote="gitlab" />
   <project path="vendor/lineage" name="vendor_lineage" remote="mist" />
   <project path="vendor/mist" name="vendor_mist" groups="pdk-fs" remote="mist-lab" />
-  <project path="vendor/official_devices" name="official_devices" remote="mist"  />
+  <project path="vendor/official_devices" name="official_devices" remote="mist-device"  />
   <project path="vendor/pixel-framework" name="android_vendor_pixel-framework" remote="rising" />
   <project path="vendor/pixeloverlays" name="android_vendor_pixeloverlays" remote="rising" />
   <project path="Spoofing" name="vendor_Spoofing" remote="mist" />
