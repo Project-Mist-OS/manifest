@@ -87,9 +87,12 @@ mistify <devicecodename> user
 ```
 ---
 ```
-mist b
+mist b 
 ```
-
+# Signed build
+```
+mist sb
+```
 
 ### Compilation Help
 To get help with build errors, please visit [**Android Building Help**](https://t.me/AndroidBuildingHelp).

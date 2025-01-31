@@ -1,18 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote name="staging"
-          fetch="https://github.com/RisingOS-staging/"
-          sync-c="true"
-          sync-j="4"
-          revision="refs/heads/fifteen" />
-
-  <remote name="rising"
-          fetch="https://github.com/RisingTechOSS/"
-          sync-c="true"
-          sync-j="4"
-          revision="refs/heads/fifteen" />
-
   <remote name="mist"
           fetch="https://github.com/Project-Mist-OS"
           sync-c="true"
@@ -120,67 +108,67 @@
     <linkfile dest="bootstrap.bash" src="bootstrap.bash" />
   </project>
   
-  <project path="build/release" name="android_build_release" groups="pdk,tradefed" remote="rising" />
+  <project path="build/release" name="build_release" groups="pdk,tradefed" remote="mist" />
   <project path="mist-maintainers" name="mist-maintainers" remote="mist-device" />
 
   <!-- Device  -->
   <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="mist" />
   
   <!-- External -->
-  <project path="external/FadingEdgeLayout" name="android_external_FadingEdgeLayout" remote="rising" />
-  <project path="external/tigervnc" name="android_external_tigervnc" groups="pdk" remote="rising" />
+  <project path="external/FadingEdgeLayout" name="external_FadingEdgeLayout" remote="mist" />
+  <project path="external/tigervnc" name="external_tigervnc" groups="pdk" remote="mist" />
 
   <!-- Frameworks  -->
-  <project path="frameworks/av" name="android_frameworks_av" groups="pdk-cw-fs,pdk-fs" remote="rising" />
+  <project path="frameworks/av" name="frameworks_av" groups="pdk-cw-fs,pdk-fs" remote="mist" />
   <project path="frameworks/base" name="frameworks-base-lineage" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" />
   <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" />
-  <project path="frameworks/native" name="android_frameworks_native" groups="pdk-cw-fs,pdk-fs" remote="rising" />
-  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" groups="pdk" remote="rising" />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk-cw-fs,pdk-fs" remote="mist" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="mist" />
 
   <!-- Hardware  -->
-  <project path="hardware/google/graphics/common" name="android_hardware_google_graphics_common" groups="pdk-lassen,pdk-gs-arm" remote="rising" />
-  <project path="hardware/interfaces" name="android_hardware_interfaces" groups="pdk,sysui-studio" remote="rising" />
-  <project path="hardware/lineage/interfaces" name="android_hardware_lineage_interfaces" remote="rising" />
+  <project path="hardware/google/graphics/common" name="hardware_google_graphics_common" groups="pdk-lassen,pdk-gs-arm" remote="mist" />
+  <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk,sysui-studio" remote="mist" />
+  <project path="hardware/lineage/interfaces" name="hardware_lineage_interfaces" remote="mist" />
 
   <!-- Lineage SDK  -->
-  <project path="lineage-sdk" name="android_lineage-sdk" remote="rising" />
+  <project path="lineage-sdk" name="lineage-sdk" remote="mist" />
 
   <!-- Non-AOSP Packages  -->
   <project path="packages/apps/Backgrounds" name="packages_apps_Backgrounds" remote="mist" />
   <project path="packages/apps/FaceUnlock" name="android_packages_apps_FaceUnlock" remote="crdroid-gitlab" />
   <project path="packages/apps/Personalizations" name="packages_apps_Mistify" groups="pdk-fs" remote="mist-lab" />
   <project path="packages/apps/VendorSupport" name="packages_apps_VendorSupport" groups="pdk-fs" remote="mist" />
-  <project path="packages/apps/DesktopMode" name="android_packages_apps_DesktopMode" remote="rising" />
-  <project path="packages/apps/GameSpace" name="android_packages_apps_GameSpace" remote="rising" />
-  <project path="packages/apps/LineageParts" name="android_packages_apps_LineageParts" remote="rising" />
-  <project path="packages/apps/OmniStyle" name="android_packages_apps_OmniStyle" remote="rising" />
+  <project path="packages/apps/DesktopMode" name="packages_apps_DesktopMode" remote="mist" />
+  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="mist" />
+  <project path="packages/apps/LineageParts" name="packages_apps_LineageParts" remote="mist" />
+  <project path="packages/apps/OmniStyle" name="packages_apps_OmniStyle" remote="mist" />
   <project path="packages/apps/SetupWizard" name="packages_apps_SetupWizard" remote="mist" />
   <project path="packages/apps/Updater" name="packages_apps_Updater" remote="mist" />
-  <project path="packages/services/OmniJaws" name="android_packages_services_OmniJaws" remote="rising" />
-  <project path="packages/services/VncFlinger" name="android_packages_services_VncFlinger" remote="rising" />
-  <project path="packages/apps/LMOFreeform" name="android_packages_apps_LMOFreeform" remote="rising" />
+  <project path="packages/services/OmniJaws" name="packages_services_OmniJaws" remote="mist" />
+  <project path="packages/services/VncFlinger" name="packages_services_VncFlinger" remote="mist" />
+  <project path="packages/apps/LMOFreeform" name="packages_apps_LMOFreeform" remote="mist" />
 
   <!-- AOSP Packages  -->
   <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" groups="pdk-fs,sysui-studio" remote="mist" />
   <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="mist" />
 
   <!-- Glyph  -->
-  <project path="packages/apps/ParanoidGlyphPhone2" name="android_packages_apps_ParanoidGlyph" groups="pdk-cw-fs,pdk-fs" remote="rising" />
+  <project path="packages/apps/ParanoidGlyphPhone2" name="packages_apps_ParanoidGlyph" groups="pdk-cw-fs,pdk-fs" remote="mist" />
   
   <!-- AOSP Modules  -->
-  <project path="packages/modules/Bluetooth" name="android_packages_modules_Bluetooth" groups="pdk" remote="rising" />
-  <project path="packages/modules/Connectivity" name="android_packages_modules_Connectivity_new" groups="pdk-cw-fs,pdk-fs" remote="rising" />
-  <project path="packages/modules/Wifi" name="android_packages_modules_Wifi" groups="pdk" remote="rising" />
+  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk" remote="mist" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="mist" />
+  <project path="packages/modules/Wifi" name="packages_modules_Wifi" groups="pdk" remote="mist" />
   
   <!-- AOSP Services -->
-  <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="rising" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="mist" />
 
   <!-- System  -->
-  <project path="system/core" name="android_system_core_new" groups="pdk" remote="rising" />
-  <project path="system/libhidl" name="android_system_libhidl" groups="pdk,sysui-studio" remote="rising" />
-  <project path="system/memory/lmkd" name="android_system_memory_lmkd" groups="pdk" remote="rising" />
-  <project path="system/sepolicy" name="android_system_sepolicy" groups="pdk" remote="rising" />
-  <project path="system/update_engine" name="android_system_update_engine" groups="pdk" remote="rising" />
+  <project path="system/core" name="system_core" groups="pdk" remote="mist" />
+  <project path="system/libhidl" name="system_libhidl" groups="pdk,sysui-studio" remote="mist" />
+  <project path="system/memory/lmkd" name="system_memory_lmkd" groups="pdk" remote="mist" />
+  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="mist" />
+  <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="mist" />
 
   <!-- Vendor  -->
   <project path="vendor/addons" name="vendor_addons" remote="mist" />
@@ -188,8 +176,8 @@
   <project path="vendor/lineage" name="vendor_lineage" remote="mist" />
   <project path="vendor/mist" name="vendor_mist" groups="pdk-fs" remote="mist-lab" />
   <project path="vendor/official_devices" name="official_devices" remote="mist-device"  />
-  <project path="vendor/pixel-framework" name="android_vendor_pixel-framework" remote="rising" />
-  <project path="vendor/pixeloverlays" name="android_vendor_pixeloverlays" remote="rising" />
+  <project path="vendor/pixel-framework" name="vendor_pixel-framework" remote="mist" />
+  <project path="vendor/pixeloverlays" name="vendor_pixeloverlays" remote="mist" />
   <project path="Spoofing" name="vendor_Spoofing" remote="mist" />
   <project path="vendor/extra" name="vendor_extra" remote="mist" />
 </manifest>
