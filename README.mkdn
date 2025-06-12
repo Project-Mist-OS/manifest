@@ -1,36 +1,104 @@
-LineageOS
-===========
+![Mist](https://github.com/Project-Mist-OS/manifest/blob/15-wip/assets/Banner.png)
+# <b> <i> MistOS | Built with </i>💖
 
-Getting started
----------------
+# This is Project-Mist-OS [Mist OS]
 
-To get started with Android/LineageOS, you'll need to get familiar with [Source Control Tools](https://source.android.com/setup/develop).
+# Build guide
 
-To initialize your local repository using the LineageOS trees, use a command like this:
+Prior to building, you will need basic knowledge of [Git](https://www.atlassian.com/git/tutorials/atlassian-git-cheatsheet).
+
+### Requirements
+- Around 350GB Disk Space.
+- A computer with at least 32GB RAM running Linux (recommended) or MacOS.
+- Build environment [setup](https://github.com/akhilnarang/scripts).
+
+# Getting Started
+
+### Initialize local repository
+
 ```
-repo init -u https://github.com/LineageOS/android.git -b lineage-22.2 --git-lfs
+repo init -u https://github.com/Project-Mist-OS/manifest -b vic --git-lfs
 ```
-Then to sync up:
+
+### Sync up 
+
 ```
-repo sync
+repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
 ```
-Please see the [LineageOS Wiki](https://wiki.lineageos.org/) for building instructions, by device.
 
+```bash
+# For gms or chromium blobs related errors due to git lfs (gitlab now limits files up to 100mb max) (credits to haggertk):
+sudo apt install git-lfs
+git lfs install
 
-Submitting patches
-------------------
-Patches are always welcome! Please submit your patches via LineageOS Gerrit!
+rm -rf vendor/gms
+rm -rf .repo/projects/vendor/gms.git
+rm -rf .repo/project-objects/*/android_vendor_gms.git
 
-Simply follow our guide on [how to submit patches](https://wiki.lineageos.org/submitting-patch-howto.html).
+repo init -u https://github.com/Project-Mist-OS/manifest -b vic --git-lfs
 
-To view the status of your and others' patches, visit [LineageOS Gerrit Code Review](https://review.lineageos.org/).
+```
 
+###Inherit LineageOS Vendor stuffs**
+```bash
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+```
+# Maintainer flag 
+```
+MISTOS_MAINTAINER="XXX"
+```
 
-Buildbot
---------
+# Blur 
+```
+TARGET_ENABLE_BLUR := true/false
+```
+# No Camera
+```
+PRODUCT_NO_CAMERA := true/false
+```
+# GApps
+```
+WITH_GMS := true/false
+```
+# For UDFPS devices
 
-All supported devices are built weekly and periodically as changes are committed to ensure the source trees remain buildable.
+TARGET_HAS_UDFPS := true
 
-You can view the current build statuses at [LineageOS Buildkite](https://buildkite.com/lineageos).
+EXTRA_UDFPS_ANIMATIONS := true
 
-Builds produced weekly by the buildbot can be downloaded from [LineageOS downloads](https://download.lineageos.org/).
+# Build
+
+```
+. build/envsetup.sh
+```
+---
+```
+mistify <devicecodename> user | userdebug
+```
+---
+```
+mist b 
+```
+# Signed build
+```
+mist sb
+```
+
+### Compilation Help
+To get help with build errors, please visit [**Android Building Help**](https://t.me/AndroidBuildingHelp).
+
+## Credits
+ * [**risingOS**](https://github.com/RisingTechOSS)
+ * [**crDroid**](https://github.com/crdroidandroid)
+ * [**Evolution X](https://github.com/Evolution-X)
+ * [**The Parasite Project**](https://github.com/TheParasiteProject)
+ * [**LineageOS**](https://github.com/LineageOS)
+ * [**SuperiorOS**](https://github.com/superioros)
+ * [**Project Awaken**](https://github.com/Project-Awaken)
+ * [**ProtonAOSP**](https://github.com/ProtonAOSP)
+ * [**PixelExperience**](https://github.com/PixelExperience)
+ * [**Yet another AOSP project**](https://github.com/Yaap)
+ * [**Pixel OS**](https://github.com/pixelos-aosp)
+ * [**ProjectBlaze**](https://github.com/ProjectBlaze)
+ * [**Superior Extended**](https://github.com/SuperiorExtended)
+ * [**And Others**]

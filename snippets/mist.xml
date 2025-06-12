@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="mist"
+           fetch="https://github.com/Project-Mist-OS"
+           sync-c="true"
+           sync-j="4"
+           revision="refs/heads/vic" />
+
+  <remote  name="staging"
+           fetch="https://github.com/Mist-OS-Staging"
+           sync-c="true"
+           sync-j="4"
+           revision="refs/heads/vic" />
+
+  <remote  name="mist-devices"
+           fetch="https://github.com/MistOS-Devices"
+           sync-c="true"
+           sync-j="4"
+           revision="refs/heads/vic" />
+
+  <remote  name="mist-codeberg"
+           fetch="https://codeberg.org/Zabuka/"
+           sync-c="true"
+           sync-j="4"
+           revision="refs/heads/vic" />
+
+  <remote  name="github-non-los"
+           sync-c="true"
+           sync-j="4"
+           fetch="https://github.com" />
+
+  <remote  name="gitlab"
+           sync-c="true"
+           sync-j="4"
+           fetch="https://gitlab.com" />
+
+  <remote  name="bitbucket"
+           sync-c="true"
+           sync-j="4"
+           fetch="https://bitbucket.org" />
+
+  <!-- Art -->
+  <project path="art" name="art" groups="pdk" remote="mist" />
+
+  <!-- Bionic -->
+  <project path="bionic" name="bionic" groups="pdk" remote="staging" />
+
+  <!-- Bootable -->
+  <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="staging" />
+
+  <!-- Build -->
+  <project path="build/make" name="build" groups="pdk,sysui-studio" remote="mist" >
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="mist" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <project path="build/release" name="build_release" groups="pdk,tradefed" remote="mist" />
+
+  <!-- External -->
+  <project path="external/FadingEdgeLayout" name="external_FadingEdgeLayout" remote="mist" />
+  <project path="external/piex" name="external_piex" groups="pdk" remote="mist" />
+  <project path="external/bouncycastle" name="external_bouncycastle" remote="staging" />
+
+  <!-- Hardware -->
+  <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk,sysui-studio" remote="mist" />
+
+  <!-- Frameworks -->
+  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="mist" />
+  <project path="frameworks/base" name="frameworks_base_los" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" />
+  <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="mist" />
+  <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" groups="pdk,sysui-studio" remote="mist" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk" remote="mist" />
+
+  <!-- Infrastructure -->
+  <project path="mist/manifest" name="manifest" remote="mist" />
+
+  <!-- Packages -->
+  <project path="packages/apps/Backgrounds" name="packages_apps_Backgrounds" remote="mist" />
+  <project path="packages/apps/BtHelper" name="TheParasiteProject/packages_apps_BtHelper" revision="main" remote="github-non-los" />
+  <project path="packages/apps/ColumbusService" name="packages_apps_ColumbusService" remote="staging" />
+  <project path="packages/apps/Mistify" name="packages_apps_Mistify" remote="staging" />
+  <project path="packages/apps/FaceUnlock" name="packages_apps_FaceUnlock" remote="staging" />
+  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="staging" />
+  <project path="packages/apps/LMOFreeform" name="packages_apps_LMOFreeform" remote="staging" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" groups="pdk-fs,sysui-studio" remote="staging" />
+  <project path="packages/apps/LineageParts" name="packages_apps_LineageParts" remote="staging" />
+  <project path="packages/apps/OmniStyle" name="packages_apps_OmniStyle" remote="staging" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings_los" groups="pdk-fs,pdk-cw-tvc" remote="staging" />
+  <project path="packages/apps/SetupWizard" name="packages_apps_SetupWizard" remote="staging" />
+  <project path="packages/apps/SystemUIFlagFlipper" name="packages_apps_SystemUIFlagFlipper" remote="staging" />
+  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk" remote="mist" />
+  <project path="packages/modules/Wifi" name="packages_modules_Wifi" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="staging" />
+  <project path="packages/services/DeviceAsWebcam" name="packages_services_DeviceAsWebcam" groups="pdk-cw-fs,pdk-fs" remote="staging" />
+  <project path="packages/services/OmniJaws" name="packages_services_OmniJaws" remote="staging" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="staging" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="staging" />
+
+  <!-- SDK -->
+  <project path="lineage-sdk" name="lineage-sdk" remote="staging" />
+
+  <!-- Sepolicy -->
+  <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="staging" />
+
+  <!-- System -->
+  <project path="system/core" name="system_core" groups="pdk" remote="staging" />
+  <project path="system/libhwbinder" name="system_libhwbinder" remote="staging" />
+  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="staging" />
+  <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="staging" />
+
+  <!-- Vendor -->
+  <project path="vendor/extras" name="vendor_extras" remote="staging" />
+  <project path="vendor/google/overlays/ThemeIcons" name="vendor_google_overlays_ThemeIcons" remote="staging" />
+  <project path="vendor/gms" name="vendor_gms" remote="mist-codeberg" clone-depth="1" />
+  <project path="vendor/lineage" name="vendor_mist" remote="staging" />
+  <project path="vendor/pixel-framework" name="vendor_pixel-framework" remote="staging" />
+  <project path="vendor/pixel-style" name="vendor_pixel-style" remote="staging" />
+</manifest>
