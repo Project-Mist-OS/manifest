@@ -59,6 +59,11 @@ PRODUCT_NO_CAMERA := true/false
 # GApps
 ```
 WITH_GMS := true/false
+
+#Options
+
+TARGET_USES_MINI_GAPPS := true
+TARGET_USES_PICO_GAPPS := true
 ```
 # For UDFPS devices
 

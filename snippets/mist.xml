@@ -65,7 +65,7 @@
   </project>
 
   <project path="build/release" name="build_release" groups="pdk,tradefed" remote="mist" />
-  <project path="mist-maintainers" name="mist-maintainers" remote="mist-device" />
+  <project path="mist-maintainers" name="mist-maintainers" remote="mist-devices" />
 
   <!-- External -->
   <project path="external/FadingEdgeLayout" name="external_FadingEdgeLayout" remote="mist" />
