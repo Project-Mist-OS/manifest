@@ -7,7 +7,7 @@
            sync-j="4"
            revision="refs/heads/16" />
 
-  <remote  name="mist-devices"
+  <remote  name="mist-device"
            fetch="https://github.com/MistOS-Devices"
            sync-c="true"
            sync-j="4"
@@ -76,7 +76,7 @@
 
   <!-- Frameworks -->
   <project path="frameworks/av" name="frameworks_av" groups="pdk,sysui-studio" remote="mist" />
-  <project path="frameworks/base" name="frameworks_base_los" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" revision="aug" />
+  <project path="frameworks/base" name="frameworks_base_los" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" revision="testing" />
   <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" />
   <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="mist" />
   <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" groups="pdk,sysui-studio" remote="mist" />
@@ -89,6 +89,7 @@
 
   <!-- Infrastructure -->
   <project path="mist/manifest" name="manifest" remote="mist" />
+  <project path="mist-maintainers" name="mist-maintainers" remote="mist-device" />
 
   <!-- Kernel -->
   <project path="kernel/configs" name="kernel_configs" groups="vts,pdk" remote="mist" />
@@ -101,12 +102,12 @@
   <project path="packages/apps/ColumbusService" name="packages_apps_ColumbusService" remote="mist" />
   <project path="packages/apps/FaceUnlock" name="packages_apps_FaceUnlock" remote="mist" />
   <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="mist" />
-  <project path="packages/apps/Mistify" name="packages_apps_Mistify" remote="mist" revision="aug" />
+  <project path="packages/apps/Mistify" name="packages_apps_Mistify" remote="mist" revision="build" />
   <project path="packages/apps/LMOFreeform" name="packages_apps_LMOFreeform" remote="mist" />
   <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="mist" />
   <project path="packages/apps/LineageParts" name="packages_apps_LineageParts" remote="mist" />
   <project path="packages/apps/OmniStyle" name="packages_apps_OmniStyle" remote="mist" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings_los" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="mist" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings_los" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="mist" revision="testing" />
   <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" groups="pdk-fs" remote="mist" />
   <project path="packages/apps/SetupWizard" name="packages_apps_SetupWizard" remote="mist" />
   <project path="packages/apps/ThemePicker" name="packages_apps_ThemePicker" groups="pdk-fs,sysui-studio" remote="mist" />
@@ -137,8 +138,10 @@
 
   <!-- Vendor -->
   <project path="vendor/extras" name="vendor_extras" remote="mist" />
+  <project path="vendor/extra" name="vendor_extra" remote="mist" />
   <project path="vendor/google/overlays/ThemeIcons" name="vendor_google_overlays_ThemeIcons" remote="mist" />
   <project path="vendor/gms" name="vendor_gms" remote="mist-codeberg" clone-depth="1" />
   <project path="vendor/lineage" name="vendor_mist" remote="mist" />
+  <project path="vendor/official_devices" name="official_devices" remote="mist-device"  />
   <project path="vendor/pixel-style" name="vendor_pixel-style" remote="mist" />
 </manifest>
