@@ -104,7 +104,7 @@
   <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="mist" />
   <project path="packages/apps/Mistify" name="packages_apps_Mistify" remote="mist" revision="build" />
   <project path="packages/apps/LMOFreeform" name="packages_apps_LMOFreeform" remote="mist" />
-  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="mist" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="mist" revision="aug"/>
   <project path="packages/apps/LineageParts" name="packages_apps_LineageParts" remote="mist" />
   <project path="packages/apps/OmniStyle" name="packages_apps_OmniStyle" remote="mist" />
   <project path="packages/apps/Settings" name="packages_apps_Settings_los" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="mist" revision="testing" />
@@ -118,6 +118,7 @@
   <project path="packages/modules/Wifi" name="packages_modules_Wifi" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" />
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="mist" />
   <project path="packages/services/Telephony" name="packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="mist" />
+   <project path="packages/services/OmniJaws" name="packages_services_OmniJaws" remote="mist" />
 
   <!-- Platform -->
   <project path="platform_testing" name="platform_testing" groups="pdk-fs,pdk-cw-fs,cts,sysui-studio" remote="mist" />
