@@ -6,7 +6,7 @@
 ### Initialize local repository
 
 ```
-repo init -u https://github.com/Mist-OS-Staging/manifest -b 16 --git-lfs
+repo init -u https://github.com/Project-Mist-OS/manifest -b 16 --git-lfs
 ```
 
 ### Sync up 
@@ -33,6 +33,13 @@ TARGET_USES_PICO_GAPPS := true/false
 ```
 TARGET_ENABLE_BLUR := true/false
 ```
+
+# Extra Flags
+```
+TARGET_SUPPORTS_QUICK_TAP := true (default is false)
+BYPASS_CHARGE_SUPPORTED := true (default is false)
+```
+
 # Build
 
 ```
