@@ -24,26 +24,14 @@
            sync-j="4"
            fetch="https://github.com" />
 
-  <remote  name="gitlab"
-           sync-c="true"
-           sync-j="4"
-           fetch="https://gitlab.com" />
-
-  <remote  name="bitbucket"
-           sync-c="true"
-           sync-j="4"
-           fetch="https://bitbucket.org" />
-
-  <!-- MistOS Manifest -->
-
   <!-- Art -->
-  <project path="art" name="art" groups="pdk" remote="mist" />
+  <project path="art" name="art" groups="pdk" remote="mist" revision="bp2a" />
 
   <!-- Bionic -->
   <project path="bionic" name="bionic" groups="pdk" remote="mist" />
 
   <!-- Bootable -->
-  <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="mist" />
+  <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="mist" revision="bp2a" />
 
   <!-- Build -->
   <project path="build/bazel" name="build_bazel" groups="pdk" remote="mist" >
@@ -51,7 +39,7 @@
     <linkfile src="bazel.BUILD" dest="BUILD" />
   </project>
 
-  <project path="build/make" name="build" groups="pdk,sysui-studio" remote="mist" >
+  <project path="build/make" name="build" groups="pdk,sysui-studio" remote="mist" revision="bp2a" >
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
     <linkfile src="core" dest="build/core" />
@@ -60,7 +48,7 @@
     <linkfile src="tools" dest="build/tools" />
   </project>
 
-  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="mist" >
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="mist" revision="bp2a" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
@@ -71,18 +59,18 @@
   <project path="external/piex" name="external_piex" groups="pdk" remote="mist" />
 
   <!-- Frameworks -->
-  <project path="frameworks/av" name="frameworks_av" groups="pdk,sysui-studio" remote="mist" />
+  <project path="frameworks/av" name="frameworks_av" groups="pdk,sysui-studio" remote="mist" revision="bp2a" />
   <project path="frameworks/base" name="frameworks_base_los" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" revision="testing" />
   <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" />
-  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="mist" />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="mist" revision="bp2a" />
   <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" groups="pdk,sysui-studio" remote="mist" />
-  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk,sysui-studio" remote="mist" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk,sysui-studio" remote="mist" revision="bp2a" />
 
   <!-- Hardware -->
   <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk,sysui-studio" remote="mist" />
 
   <!-- Infrastructure -->
-  <project path="mist/manifest" name="manifest" remote="mist" />
+  <project path="mist/manifest" name="android_manifest" remote="mist" revision="bp2a" />
   <project path="mist-maintainers" name="mist-maintainers" remote="mist-device" />
 
   <!-- Kernel -->
@@ -121,7 +109,7 @@
 
   <!-- System -->
   <project path="system/bpf" name="system_bpf" groups="pdk" remote="mist" />
-  <project path="system/core" name="system_core" groups="pdk" remote="mist" revision="16-new" />
+  <project path="system/core" name="system_core" groups="pdk" remote="mist" revision="bp2a" />
   <project path="system/libhwbinder" name="system_libhwbinder" groups="pdk" remote="mist" />
   <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="mist" />
 
