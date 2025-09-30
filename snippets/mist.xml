@@ -82,7 +82,7 @@
 
   <!-- Packages -->
   <project path="packages/apps/BtHelper" name="TheParasiteProject/packages_apps_BtHelper" revision="main" remote="github-non-los" />
-  <project path="packages/apps/ColumbusService" name="packages_apps_ColumbusService" remote="mist" />
+  <project path="packages/apps/ColumbusService" name="packages_apps_ColumbusService" remote="mist" revision="bp2a" />
   <project path="packages/apps/FaceUnlock" name="packages_apps_FaceUnlock" remote="mist" />
   <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="mist" />
   <project path="packages/apps/Mistify" name="packages_apps_Mistify" remote="mist" revision="build" />
