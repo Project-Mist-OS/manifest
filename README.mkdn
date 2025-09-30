@@ -1,72 +1,137 @@
-![Mist](https://github.com/Project-Mist-OS/manifest/blob/15-wip/assets/Banner.png)
-# <b> <i> MistOS | Built with </i>💖
+<div align="center">
 
-# This is Project-Mist-OS [Mist OS]
+<img src="https://github.com/Project-Mist-OS/manifest/blob/15-wip/assets/Banner.png" alt="MistOS Banner" width="100%">
 
-### Initialize local repository
+<h1><b>MistOS</b></h1>
+<h3><i>Built with 💖</i></h3>
 
-```
+[![Android](https://img.shields.io/badge/Android-16-3DDC84?style=for-the-badge\&logo=android\&logoColor=white)](https://github.com/Project-Mist-OS)
+[![Telegram](https://img.shields.io/badge/Telegram-Channel-26A5E4?style=for-the-badge\&logo=telegram)](https://t.me/MistOSUpdate)
+
+<p><b>A custom Android ROM focused on performance, customization, and user experience</b></p>
+
+</div>
+
+---
+
+## 🚀 **Quick Start**
+
+### **Initialize Repository**
+```bash
 repo init -u https://github.com/Project-Mist-OS/manifest -b 16 --git-lfs
 ```
 
-### Sync up 
-
-```
+### **Sync Sources**
+```bash
 repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
 ```
-# Maintainer flag 
-```
-MISTOS_MAINTAINER="XXX"
-```
 
-# GMS flag
-```
-WITH_GMS := true/false
-```
-
-# Optional GMS / Default is Full GMS
-```
-TARGET_USES_MINI_GAPPS := true/false
-TARGET_USES_PICO_GAPPS := true/false
-```
-# Blur 
-```
-TARGET_ENABLE_BLUR := true/false
-```
-
-# Extra Flags
-```
-TARGET_SUPPORTS_QUICK_TAP := true (default is false)
-BYPASS_CHARGE_SUPPORTED := true (default is false)
-```
-
-# Build
-
-```
+### **Build MistOS**
+```bash
+# Setup environment
 . build/envsetup.sh
-```
----
 
-```
+# Initialize build for your device
 mistify <devicecodename> user | userdebug
-```
----
-```
-mist b 
+
+# Start building
+mist b
 ```
 
-## Credits
- * [**risingOS**](https://github.com/RisingTechOSS)
- * [**crDroid**](https://github.com/crdroidandroid)
- * [**Evolution X**](https://github.com/Evolution-X)
- * [**The Parasite Project**](https://github.com/TheParasiteProject)
- * [**LineageOS**](https://github.com/LineageOS)
- * [**SuperiorOS**](https://github.com/superioros)
- * [**Project Awaken**](https://github.com/Project-Awaken)
- * [**ProtonAOSP**](https://github.com/ProtonAOSP)
- * [**PixelExperience**](https://github.com/PixelExperience)
- * [**Yet another AOSP project**](https://github.com/Yaap)
- * [**Pixel OS**](https://github.com/pixelos-aosp)
- * [**ProjectBlaze**](https://github.com/ProjectBlaze)
- * [**Superior Extended**](https://github.com/SuperiorExtended)
- * [**And Others**]
+---
+
+## ⚙️ **Configuration Flags**
+
+### **Essential Flags**
+
+| Flag | Description | Values |
+|------|-------------|--------|
+| `MISTOS_MAINTAINER` | Set maintainer name | `"Your Name"` |
+| `WITH_GMS` | Include Google Mobile Services | `true` / `false` |
+
+### **GMS Variants** *(Optional)*
+
+| Flag | Description | Default |
+|------|-------------|---------|
+| `TARGET_USES_MINI_GAPPS` | Use minimal GApps package | `false` |
+| `TARGET_USES_PICO_GAPPS` | Use pico GApps package | `false` |
+
+> 💡 **Note**: Default configuration includes Full GMS package
+
+### **UI Customization**
+
+| Flag | Description | Default |
+|------|-------------|---------|
+| `TARGET_ENABLE_BLUR` | Enable system-wide blur effects | `false` |
+
+### **Feature Flags**
+
+| Flag | Description | Default |
+|------|-------------|---------|
+| `TARGET_SUPPORTS_QUICK_TAP` | Enable Quick Tap gestures | `false` |
+| `BYPASS_CHARGE_SUPPORTED` | Support bypass charging | `false` |
+
+---
+
+## 📝 **Build Example**
+
+```makefile
+# In your device.mk or BoardConfig.mk
+
+# Set maintainer
+MISTOS_MAINTAINER := "John Doe"
+
+# Enable GMS with mini package
+WITH_GMS := true
+TARGET_USES_MINI_GAPPS := true
+
+# Enable UI enhancements
+TARGET_ENABLE_BLUR := true
+
+# Enable features
+TARGET_SUPPORTS_QUICK_TAP := true
+BYPASS_CHARGE_SUPPORTED := true
+```
+
+---
+
+## 🤝 **Contributing**
+
+We welcome contributions from the community!
+
+### **Device Maintainership**
+
+Interested in maintaining MistOS for your device? Check our [Maintainer Requirements](https://github.com/Project-Mist-OS/maintainership/issues/new/choose).
+
+---
+
+## 🙏 **Credits**
+
+We extend our gratitude to these amazing projects that make MistOS possible:
+
+| [![LineageOS](https://avatars.githubusercontent.com/u/24304779?s=200\&v=4)](https://github.com/LineageOS)             | [![Rising Revived OSS](https://avatars.githubusercontent.com/u/197353021?s=200&v=4)](https://github.com/RisingOS-Revived) | [![YAAP](https://avatars.githubusercontent.com/u/70501337?s=200\&v=4)](https://github.com/Yaap)                  | [![crDroid](https://avatars.githubusercontent.com/u/9610671?s=200\&v=4)](https://github.com/crdroidandroid) | [![Evolution X](https://avatars.githubusercontent.com/u/165590896?s=200\&v=4)](https://github.com/Evolution-X)      | [![The Parasite Project](https://avatars.githubusercontent.com/u/106430773?s=200\&v=4)](https://github.com/TheParasiteProject) |
+| --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| [![PixelExperience](https://avatars.githubusercontent.com/u/38539471?s=200\&v=4)](https://github.com/PixelExperience) | [![Pixel OS](https://avatars.githubusercontent.com/u/82160282?s=200\&v=4)](https://github.com/pixelos-aosp)               | [![Derpfest AOSP](https://avatars.githubusercontent.com/u/71037289?s=200&v=4)](https://github.com/DerpFest-AOSP) | [![SuperiorOS](https://avatars.githubusercontent.com/u/43355064?s=200\&v=4)](https://github.com/superioros) | [![Project Awaken](https://avatars.githubusercontent.com/u/68725628?s=200\&v=4)](https://github.com/Project-Awaken) | [![AxionOS](https://avatars.githubusercontent.com/u/197447202?s=200&v=4)](https://github.com/AxionAOSP)                        |
+
+<p align="center">
+<br>
+<b>And all other contributors who make custom ROM development possible!</b> ❤️
+</p>
+
+---
+
+<div align="center">
+  
+  ## **License**
+  
+  ```
+  Copyright (C) 2024 Project-Mist-OS
+  
+  Licensed under the Apache License, Version 2.0
+  ```
+  
+  ---
+  
+  **Made with** 💖 **by the MistOS Team**
+  
+</div>
