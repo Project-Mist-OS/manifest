@@ -1,8 +1,8 @@
 <div align="center">
 
-<img src="https://github.com/Project-Mist-OS/manifest/blob/15-wip/assets/Banner.png" alt="MistOS Banner" width="100%">
+<img src="https://github.com/Project-Mist-OS/manifest/blob/15-wip/assets/Banner.webp" alt="MistOS Banner" width="100%">
 
-<h1><b>MistOS</b></h1>
+<h1><b>Project MistOS</b></h1>
 <h3><i>Built with 💖</i></h3>
 
 [![Android](https://img.shields.io/badge/Android-16-3DDC84?style=for-the-badge\&logo=android\&logoColor=white)](https://github.com/Project-Mist-OS)
@@ -46,15 +46,15 @@ mist b
 
 | Flag | Description | Values |
 |------|-------------|--------|
-| `MISTOS_MAINTAINER` | Set maintainer name | `"Your Name"` |
-| `WITH_GMS` | Include Google Mobile Services | `true` / `false` |
+| `MISTOS_MAINTAINER :=` | Set maintainer name | `"Your Name"` |
+| `WITH_GMS :=` | Include Google Mobile Services | `true` / `false` |
 
 ### **GMS Variants** *(Optional)*
 
 | Flag | Description | Default |
 |------|-------------|---------|
-| `TARGET_USES_MINI_GAPPS` | Use minimal GApps package | `false` |
-| `TARGET_USES_PICO_GAPPS` | Use pico GApps package | `false` |
+| `TARGET_USES_MINI_GAPPS :=` | Use minimal GApps package | `false` |
+| `TARGET_USES_PICO_GAPPS :=` | Use pico GApps package | `false` |
 
 > 💡 **Note**: Default configuration includes Full GMS package
 
@@ -62,14 +62,14 @@ mist b
 
 | Flag | Description | Default |
 |------|-------------|---------|
-| `TARGET_ENABLE_BLUR` | Enable system-wide blur effects | `false` |
+| `TARGET_ENABLE_BLUR :=` | Enable system-wide blur effects | `false` |
 
 ### **Feature Flags**
 
 | Flag | Description | Default |
 |------|-------------|---------|
-| `TARGET_SUPPORTS_QUICK_TAP` | Enable Quick Tap gestures | `false` |
-| `BYPASS_CHARGE_SUPPORTED` | Support bypass charging | `false` |
+| `TARGET_SUPPORTS_QUICK_TAP :=` | Enable Quick Tap gestures | `false` |
+| `BYPASS_CHARGE_SUPPORTED :=` | Support bypass charging | `false` |
 
 ---
 
