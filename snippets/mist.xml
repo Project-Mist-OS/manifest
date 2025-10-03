@@ -60,14 +60,14 @@
 
   <!-- Frameworks -->
   <project path="frameworks/av" name="frameworks_av" groups="pdk,sysui-studio" remote="mist" revision="bp2a" />
-  <project path="frameworks/base" name="frameworks_base_los" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" revision="bp2a" />
+  <project path="frameworks/base" name="frameworks_base_los" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" revision="bp2a-new" />
   <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" />
   <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="mist" revision="bp2a" />
   <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" groups="pdk,sysui-studio" remote="mist" />
   <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk,sysui-studio" remote="mist" revision="bp2a" />
 
   <!-- Hardware -->
-  <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk,sysui-studio" remote="mist" />
+  <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk,sysui-studio" remote="mist" revision="bp2a" />
 
   <!-- Infrastructure -->
   <project path="mist/manifest" name="android_manifest" remote="mist" revision="bp2a" />
@@ -84,7 +84,7 @@
   <project path="packages/apps/BtHelper" name="TheParasiteProject/packages_apps_BtHelper" revision="main" remote="github-non-los" />
   <project path="packages/apps/ColumbusService" name="packages_apps_ColumbusService" remote="mist" revision="bp2a" />
   <project path="packages/apps/FaceUnlock" name="packages_apps_FaceUnlock" remote="mist" />
-  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="mist" />
+  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="mist" revision="bp2a" />
   <project path="packages/apps/Mistify" name="packages_apps_Mistify" remote="mist" revision="bp2a" />
   <project path="packages/apps/LMOFreeform" name="packages_apps_LMOFreeform" remote="mist" />
   <project path="packages/apps/LineageParts" name="packages_apps_LineageParts" remote="mist" />
@@ -93,10 +93,10 @@
   <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" groups="pdk-fs" remote="mist" />
   <project path="packages/apps/SetupWizard" name="packages_apps_SetupWizard" remote="mist" />
   <project path="packages/apps/Updater" name="packages_apps_Updater" remote="mist"/>
-  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk" remote="mist" />
-  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="mist" />
-  <project path="packages/modules/Permission" name="packages_modules_Permission" groups="pdk-cw-fs,pdk-fs" remote="mist" />
-  <project path="packages/modules/Wifi" name="packages_modules_Wifi" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" />
+  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk" remote="mist" revision="bp2a" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="mist" revision="bp2a" />
+  <project path="packages/modules/Permission" name="packages_modules_Permission" groups="pdk-cw-fs,pdk-fs" remote="mist" revision="bp2a" />
+  <project path="packages/modules/Wifi" name="packages_modules_Wifi" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" revision="bp2a" />
   <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="mist" />
   <project path="packages/services/Telephony" name="packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="mist" />
    <project path="packages/services/OmniJaws" name="packages_services_OmniJaws" remote="mist" />
@@ -105,16 +105,16 @@
   <project path="platform_testing" name="platform_testing" groups="pdk-fs,pdk-cw-fs,cts,sysui-studio" remote="mist" />
 
   <!-- Sepolicy -->
-  <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="mist" />
+  <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="mist" revision="bp2a" />
 
   <!-- System -->
   <project path="system/bpf" name="system_bpf" groups="pdk" remote="mist" />
   <project path="system/core" name="system_core" groups="pdk" remote="mist" revision="bp2a" />
   <project path="system/libhwbinder" name="system_libhwbinder" groups="pdk" remote="mist" />
-  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="mist" />
+  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="mist" revision="bp2a" />
 
   <!-- Vendor -->
-  <project path="vendor/extras" name="vendor_extras" remote="mist" />
+  <project path="vendor/extras" name="vendor_extras" remote="mist" revision="bp2a" />
   <project path="vendor/google/overlays/ThemeIcons" name="vendor_google_overlays_ThemeIcons" remote="mist" />
   <project path="vendor/gms" name="vendor_gms" remote="mist-codeberg" clone-depth="1" />
   <project path="vendor/lineage" name="vendor_mist" remote="mist" revision="bp2a" />
