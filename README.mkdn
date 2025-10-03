@@ -18,7 +18,7 @@
 
 ### **Initialize Repository**
 ```bash
-repo init -u https://github.com/Project-Mist-OS/manifest -b 16 --git-lfs
+repo init -u https://github.com/Mist-OS-Staging/android_manifest -b bp2a --git-lfs
 ```
 
 ### **Sync Sources**
