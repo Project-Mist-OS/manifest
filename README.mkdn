@@ -73,6 +73,18 @@ mist b
 
 ---
 
+## **About Phone**
+```
+ro.mist.display=1080 x 2400, 120 hz
+ro.mist.battery=6000mah
+ro.mist.soc=Snapdragon® 732G
+ro.mist.rear=64MP + 13MP + 2MP
+ro.mist.front=20MP
+ro.mist.platform=SM7150-AC
+ro.mist.screen=6.67' IPS LCD
+ro.mist.device=Poco X3 
+```
+
 ## 📝 **Build Example**
 
 ```makefile
