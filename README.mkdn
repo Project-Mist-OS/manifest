@@ -82,7 +82,7 @@ ro.mist.camera=64MP + 13MP + 2MP
 ro.mist.front=20MP
 ro.mist.platform=SM7150-AC
 ro.mist.screen=6.67' IPS LCD
-ro.mist.device=Poco X3 
+ro.mist.device.name=Poco X3 
 ```
 
 ## 📝 **Build Example**
