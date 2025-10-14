@@ -84,6 +84,11 @@ ro.mist.platform=SM7150-AC
 ro.mist.screen=6.67' IPS LCD
 ro.mist.device.name=Poco X3 
 ```
+## ** Quick Switch**
+```
+TARGET_DEFAULT_PIXEL_LAUNCHER := true [if you want to ship default pixel launcher.]
+Only with GMS build.
+```
 
 ## 📝 **Build Example**
 
