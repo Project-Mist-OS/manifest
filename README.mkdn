@@ -1,116 +1,154 @@
-![alt text][logo]
+<div align="center">
 
-[logo]:https://crdroid.net/img/logo.png "crDroid Android"
+<img src="https://github.com/Project-Mist-OS/manifest/blob/15-wip/assets/Banner.webp" alt="MistOS Banner" width="100%">
 
-## 1. Grabbing the source
+<h1><b>Project MistOS</b></h1>
+<h3><i>Built with 💖</i></h3>
 
-Repo is a tool provided by Google that simplifies using Git in the context of the Android source:
-- Repo docs: http://source.android.com/source/developing.html
-- Git docs: http://git-scm.com/book
+[![Android](https://img.shields.io/badge/Android-16-3DDC84?style=for-the-badge\&logo=android\&logoColor=white)](https://github.com/Project-Mist-OS)
+[![Telegram](https://img.shields.io/badge/Telegram-Channel-26A5E4?style=for-the-badge\&logo=telegram)](https://t.me/MistOSUpdate)
 
-### 1.1 Installing dependencies and Repo
+<p><b>A custom Android ROM focused on performance, customization, and user experience</b></p>
 
-Several packages are needed in order to build crDroid. Example (we are using Ubuntu):
-```bash
-sudo apt install bc bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick lib32ncurses-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses6 libncurses-dev libsdl1.2-dev libssl-dev libwxgtk3.2-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev
-```
-(Some of those packages may need adjustment for your linux distribution)
-
-Install the Repo tool:
-```bash
-# create ~/bin and add to PATH for this session (or add to your shell profile)
-mkdir -p ~/bin
-export PATH=~/bin:$PATH
-
-# download Repo
-curl https://storage.googleapis.com/git-repo-downloads/repo > ~/bin/repo
-
-# make Repo executable
-chmod a+x ~/bin/repo
-```
-
-Tip: Add `export PATH=~/bin:$PATH` to `~/.bashrc` or your shell profile so Repo is available in future sessions.
-
-### 1.2 Initializing Repo
-
-Create a workspace and initialize the crDroid 16.0 manifest:
-```bash
-mkdir -p ~/crDroid
-cd ~/crDroid
-repo init -u https://github.com/crdroidandroid/android.git -b 16.0 --git-lfs --no-clone-bundle
-```
-
-Sync the source tree (may take a long time on first run):
-```bash
-repo sync
-```
-
-Notes and useful flags:
-- To recover from interrupted syncs or to force a fresh copy:  
-  `repo sync --force-sync --no-tags --no-clone-bundle -j8` (adjust `-j` to match your bandwidth/CPUs).
-- Use `repo sync -c` to only sync the current branch per project (saves time/space) when appropriate.
+</div>
 
 ---
 
-## 2. Building
+## 🚀 **Quick Start**
 
-Prepare the build environment:
+### **Initialize Repository**
 ```bash
+repo init -u https://github.com/Project-Mist-OS/manifest -b base --git-lfs
+```
+
+### **Sync Sources**
+```bash
+repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
+```
+
+### **Build MistOS**
+```bash
+# Setup environment
 . build/envsetup.sh
-```
 
-Build using:
-```bash
-brunch <devicecodename>
-```
-(Replace `<devicecodename>` with your device codename, e.g. `caiman`, `lemonadep`, etc.)
+# Initialize build for your device
+mistify <devicecodename> user | userdebug
 
-Troubleshooting tips:
-- Out-of-disk-space: ensure enough free space (Android tree can require 100+ GB).
-- If builds fail after repo sync, try `repo sync --force-sync` and a clean build: `mka clean` then rebuild.
+# Start building
+mist b
+```
 
 ---
 
-## 3. Contributions
+## ⚙️ **Configuration Flags**
 
-To submit changes or patches:
-- Fork the repository on GitHub, make your changes, and open a Pull Request against the appropriate branch.
-- We review PRs and merge them when appropriate.
+### **Essential Flags**
+
+| Flag | Description | Values |
+|------|-------------|--------|
+| `MISTOS_MAINTAINER :=` | Set maintainer name | `"Your Name"` |
+| `WITH_GMS :=` | Include Google Mobile Services | `true` / `false` |
+
+### **GMS Variants** *(Optional)*
+
+| Flag | Description | Default |
+|------|-------------|---------|
+| `TARGET_USES_MINI_GAPPS :=` | Use minimal GApps package | `false` |
+| `TARGET_USES_PICO_GAPPS :=` | Use pico GApps package | `false` |
+
+> 💡 **Note**: Default configuration includes Full GMS package
+
+### **UI Customization**
+
+| Flag | Description | Default |
+|------|-------------|---------|
+| `TARGET_ENABLE_BLUR :=` | Enable system-wide blur effects | `false` |
+
+### **Feature Flags**
+
+| Flag | Description | Default |
+|------|-------------|---------|
+| `TARGET_SUPPORTS_QUICK_TAP :=` | Enable Quick Tap gestures | `false` |
+| `BYPASS_CHARGE_SUPPORTED :=` | Support bypass charging | `false` |
 
 ---
 
-## 4. How to become an Official Maintainer
+## **About Phone**
+```
+ro.mist.display=1080 x 2400, 120 hz
+ro.mist.battery=6000mah
+ro.mist.soc=Snapdragon® 732G
+ro.mist.camera=64MP + 13MP + 2MP
+ro.mist.front=20MP
+ro.mist.platform=SM7150-AC
+ro.mist.screen=6.67' IPS LCD
+ro.mist.device.name=Poco X3 
+```
+## ** Quick Switch**
+```
+TARGET_DEFAULT_PIXEL_LAUNCHER := true [if you want to ship default pixel launcher.]
+Only with GMS build.
+```
 
-1. Read and follow our rules and guidelines:
-   https://github.com/crdroidandroid/rules-and-guidelines
-2. If everything is in order, message Gabriel on Telegram:
-   https://telegram.me/gwolf2u
+## 📝 **Build Example**
+
+```makefile
+# In your device.mk or BoardConfig.mk
+
+# Set maintainer
+MISTOS_MAINTAINER := "John Doe"
+
+# Enable GMS with mini package
+WITH_GMS := true
+TARGET_USES_MINI_GAPPS := true
+
+# Enable UI enhancements
+TARGET_ENABLE_BLUR := true
+
+# Enable features
+TARGET_SUPPORTS_QUICK_TAP := true
+BYPASS_CHARGE_SUPPORTED := true
+```
 
 ---
 
-## 5. crDroid features / overlays, translations and forum template
+## 🤝 **Contributing**
 
-### 5.1 crDroid overlays
-Set overlays to the proper paths.
+We welcome contributions from the community!
 
-Frameworks base:
-```text
-overlay/frameworks/base/core/res/res/values/config.xml
-```
-Example reference:
-https://github.com/crdroidandroid/android_frameworks_base/blob/16.0/core/res/res/values/cr_config.xml
+### **Device Maintainership**
 
-SystemUI:
-```text
-overlay/frameworks/base/packages/SystemUI/res/values/config.xml
-```
-Example reference:
-https://github.com/crdroidandroid/android_frameworks_base/blob/16.0/packages/SystemUI/res/values/cr_config.xml
+Interested in maintaining MistOS for your device? Check our [Maintainer Requirements](https://github.com/Project-Mist-OS/maintainership/issues/new/choose).
 
-### 5.2 Translations
-We use Crowdin for translations. To help out see:
-https://github.com/crdroidandroid/crdroid_features#translations
+---
 
-### 5.3 Forum template
-Ready to share your build? Use the forum post template:
-https://github.com/crdroidandroid/crdroid_features/blob/16.0/ForumPostTemplate
+## 🙏 **Credits**
+
+We extend our gratitude to these amazing projects that make MistOS possible:
+
+| [![LineageOS](https://avatars.githubusercontent.com/u/24304779?s=200\&v=4)](https://github.com/LineageOS)             | [![Rising Revived OSS](https://avatars.githubusercontent.com/u/197353021?s=200&v=4)](https://github.com/RisingOS-Revived) | [![YAAP](https://avatars.githubusercontent.com/u/70501337?s=200\&v=4)](https://github.com/Yaap)                  | [![crDroid](https://avatars.githubusercontent.com/u/9610671?s=200\&v=4)](https://github.com/crdroidandroid) | [![Evolution X](https://avatars.githubusercontent.com/u/165590896?s=200\&v=4)](https://github.com/Evolution-X)      | [![The Parasite Project](https://avatars.githubusercontent.com/u/106430773?s=200\&v=4)](https://github.com/TheParasiteProject) |
+| --------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| [![PixelExperience](https://avatars.githubusercontent.com/u/38539471?s=200\&v=4)](https://github.com/PixelExperience) | [![Pixel OS](https://avatars.githubusercontent.com/u/82160282?s=200\&v=4)](https://github.com/pixelos-aosp)               | [![Derpfest AOSP](https://avatars.githubusercontent.com/u/71037289?s=200&v=4)](https://github.com/DerpFest-AOSP) | [![SuperiorOS](https://avatars.githubusercontent.com/u/43355064?s=200\&v=4)](https://github.com/superioros) | [![Project Awaken](https://avatars.githubusercontent.com/u/68725628?s=200\&v=4)](https://github.com/Project-Awaken) | [![AxionOS](https://avatars.githubusercontent.com/u/197447202?s=200&v=4)](https://github.com/AxionAOSP)                        |
+
+<p align="center">
+<br>
+<b>And all other contributors who make custom ROM development possible!</b> ❤️
+</p>
+
+---
+
+<div align="center">
+  
+  ## **License**
+  
+  ```
+  Copyright (C) 2024 Project-Mist-OS
+  
+  Licensed under the Apache License, Version 2.0
+  ```
+  
+  ---
+  
+  **Made with** 💖 **by the MistOS Team**
+  
+</div>
