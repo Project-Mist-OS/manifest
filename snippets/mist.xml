@@ -7,6 +7,12 @@
            sync-j="4"
            revision="refs/heads/16" />
 
+  <remote  name="org"
+           fetch="https://github.com/Project-Mist-OS"
+           sync-c="true"
+           sync-j="4"
+           revision="refs/heads/bp2a" />
+
   <remote  name="mist-device"
            fetch="https://github.com/MistOS-Devices"
            sync-c="true"
@@ -118,7 +124,7 @@
   <project path="vendor/extras" name="vendor_extras" remote="mist" revision="bp2a" />
   <project path="vendor/google/overlays/ThemeIcons" name="vendor_google_overlays_ThemeIcons" remote="mist" />
   <project path="vendor/gms" name="vendor_gms" remote="mist-codeberg" clone-depth="1" />
-  <project path="vendor/lineage" name="vendor_mist" remote="mist" revision="bp2a" />
+  <project path="vendor/lineage" name="vendor_mist" remote="org" revision="bp2a" />
   <project path="vendor/official_devices" name="official_devices" remote="mist-device"  />
   <project path="vendor/pixel-style" name="vendor_pixel-style" remote="mist" />
 </manifest>
