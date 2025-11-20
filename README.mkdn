@@ -48,6 +48,7 @@ mist b
 |------|-------------|--------|
 | `MISTOS_MAINTAINER :=` | Set maintainer name | `"Your Name"` |
 | `WITH_GMS :=` | Include Google Mobile Services | `true` / `false` |
+| `TARGET_HAS_UDFPS :=` | for UDFPS supported devices | `true` |
 
 ### **GMS Variants** *(Optional)*
 
