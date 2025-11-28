@@ -17,6 +17,9 @@
            remote="github"
            sync-c="true"
            sync-j="4" />
+  
+  <remote name="gitlab"
+        fetch="https://gitlab.com/" />
 
   <contactinfo bugurl="go/repo-bug" />
 
