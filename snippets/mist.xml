@@ -57,6 +57,8 @@
   <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="mist" />
   
   <!-- External  -->
+  <remove-project path="external/sqlite" />
+  <project path="external/sqlite" name="GrapheneOS/platform_external_sqlite" remote="github-non-los" revision="16-qpr1" />
   <project path="external/bouncycastle" name="external_bouncycastle" groups="pdk" remote="mist" />
   <project path="external/arm-optimized-routines" name="external_arm-optimized-routines" groups="pdk" remote="mist" />
   <project path="external/FadingEdgeLayout" name="external_FadingEdgeLayout" groups="pdk" remote="mist" />
