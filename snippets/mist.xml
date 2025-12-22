@@ -113,7 +113,8 @@
   <project path="packages/apps/Settings" name="packages_apps_Settings_new" groups="pdk-fs" remote="mist" />
   <project path="packages/apps/BtHelper" name="packages_apps_BtHelper" remote="mist" />
   <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="mist" />
-  
+  <project path="packages/apps/AviumLockscreenEdit" name="packages_apps_AviumLockscreenEdit" remote="mist" />
+
   <!-- AOSP Modules  -->
   <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk" remote="mist" />
   <project path="packages/modules/Wifi" name="packages_modules_Wifi" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" />
