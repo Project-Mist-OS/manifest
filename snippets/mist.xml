@@ -62,9 +62,10 @@
   <project path="external/FadingEdgeLayout" name="external_FadingEdgeLayout" groups="pdk" remote="mist" />
   <project path="external/piex" name="external_piex" groups="pdk" remote="mist" />
   <project path="external/lz4" name="external_lz4" groups="pdk" remote="mist" />
+  <project path="external/dng_sdk" name="external_dng_sdk" groups="pdk" remote="mist" />
 
   <!-- CodeLinaro additions -->
-  <project path="hardware/qcom-caf/sm8450/display" name="hardware_qcom_display" groups="qcom" revision="4.3-sm8450" remote="mist" />
+  <project path="hardware/qcom-caf/sm8450/display" name="hardware_qcom_display" groups="qcom" revision="q1-sm8450" remote="mist" />
   <project path="hardware/lineage/compat" name="hardware_lineage_compat" remote="mist" />
   <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk,sysui-studio" remote="mist" />
 
