@@ -5,7 +5,7 @@
            fetch="https://github.com/Mist-OS-Staging"
            sync-c="true"
            sync-j="4"
-           revision="refs/heads/4.3" />
+           revision="refs/heads/q1" />
 
   <remote  name="mist-device"
            fetch="https://github.com/MistOS-Devices"
@@ -17,7 +17,7 @@
            fetch="https://codeberg.org/Zabuka"
            sync-c="true"
            sync-j="4"
-           revision="refs/heads/4.3" />
+           revision="refs/heads/q1" />
 
   <remote  name="github-non-los"
            sync-c="true"
