@@ -24,6 +24,11 @@
            sync-j="4"
            fetch="https://github.com" />
 
+  <remote  name="gitlab"
+           sync-c="true"
+           sync-j="4"
+           fetch="https://gitlab.com" />
+
 <!-- Android Manifest  -->
   <project path="art" name="art" remote="mist" />
   
