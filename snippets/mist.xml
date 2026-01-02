@@ -2,10 +2,10 @@
 <manifest>
 
   <remote  name="mist"
-           fetch="https://github.com/Mist-OS-Staging"
+           fetch="https://github.com/Project-Mist-OS"
            sync-c="true"
            sync-j="4"
-           revision="refs/heads/q1" />
+           revision="refs/heads/16" />
 
   <remote  name="mist-device"
            fetch="https://github.com/MistOS-Devices"
@@ -70,7 +70,7 @@
   <project path="external/dng_sdk" name="external_dng_sdk" groups="pdk" remote="mist" />
 
   <!-- CodeLinaro additions -->
-  <project path="hardware/qcom-caf/sm8450/display" name="hardware_qcom_display" groups="qcom" revision="q1-sm8450" remote="mist" />
+  <project path="hardware/qcom-caf/sm8450/display" name="hardware_qcom_display" groups="qcom" revision="16-sm8450" remote="mist" />
   <project path="hardware/lineage/compat" name="hardware_lineage_compat" remote="mist" />
   <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk,sysui-studio" remote="mist" />
 
