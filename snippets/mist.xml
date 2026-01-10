@@ -28,7 +28,15 @@
            sync-c="true"
            sync-j="4"
            fetch="https://gitlab.com" />
-
+<remote  name="mist-codeberg"
+           fetch="https://codeberg.org"
+           sync-c="true"
+           sync-j="4"
+           />
+<remote  name="gitea"
+           sync-c="true"
+           sync-j="4"
+           fetch="https://gitea.com" />
 <!-- Android Manifest  -->
   <project path="art" name="art" remote="mist" />
   
