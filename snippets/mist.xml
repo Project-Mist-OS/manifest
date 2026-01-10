@@ -28,7 +28,7 @@
            sync-c="true"
            sync-j="4"
            fetch="https://gitlab.com" />
-<remote  name="mist-codeberg"
+<remote  name="codeberg"
            fetch="https://codeberg.org"
            sync-c="true"
            sync-j="4"
