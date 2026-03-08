@@ -75,7 +75,7 @@
   <project path="packages/apps/DocumentsUI" name="Mist-OS-Staging/packages_apps_DocumentsUI" groups="pdk-cw-fs,pdk-fs" remote="staging" />
   <project path="packages/apps/FaceUnlock" name="Mist-OS-Staging/packages_apps_FaceUnlock" remote="staging" />
   <project path="packages/apps/GameSpace" name="Mist-OS-Staging/packages_apps_GameSpace" remote="staging" />
-  <project path="packages/apps/Launcher3" name="Mist-OS-Staging/packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="staging" revision="test-16.2" />
+  <project path="packages/apps/Launcher3" name="Mist-OS-Staging/packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="staging" revision="16.2-test" />
   <project path="packages/apps/LineageParts" name="Mist-OS-Staging/packages_apps_LineageParts" remote="staging" />
   <project path="packages/apps/LMOFreeform" name="Mist-OS-Staging/packages_apps_LMOFreeform" remote="staging" />
   <project path="packages/apps/Matlog" name="Mist-OS-Staging/packages_apps_Matlog" remote="staging" />
@@ -105,7 +105,7 @@
 
   <project path="vendor/extras" name="Mist-OS-Staging/vendor_extras" remote="staging" />
   <project path="vendor/certification" name="Mist-OS-Staging/vendor_certification" remote="staging" />
-  <project path="vendor/lineage" name="Mist-OS-Staging/vendor_mist" remote="staging" revision="16.2-test" />
+  <project path="vendor/lineage" name="Mist-OS-Staging/vendor_mist" remote="staging" revision="test-16.2" />
   <project path="vendor/gms" name="vendor_gms" remote="mist-codeberg" />
   <project path="vendor/google/overlays/ThemeIcons" name="Mist-OS-Staging/vendor_google_overlays_ThemeIcons" remote="staging" />
   <project path="vendor/bcr" name="Mist-OS-Staging/vendor_bcr" remote="staging" />
