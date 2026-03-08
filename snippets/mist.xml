@@ -12,7 +12,7 @@
            sync-c="true"
            sync-j="4"
            depth="1"
-           revision="refs/heads/16.2" />
+           revision="refs/heads/16.2-test" />
 
   <remote  name="mist-device"
            fetch="https://github.com/MistOS-Devices"
@@ -106,6 +106,7 @@
   <project path="vendor/extras" name="Mist-OS-Staging/vendor_extras" remote="staging" />
   <project path="vendor/certification" name="Mist-OS-Staging/vendor_certification" remote="staging" />
   <project path="vendor/lineage" name="Mist-OS-Staging/vendor_mist" remote="staging" revision="test-16.2" />
+  <project path="vendor/pixel-style" name="Mist-OS-Staging/vendor_pixel-styles" remote="staging" />
   <project path="vendor/gms" name="vendor_gms" remote="mist-codeberg" />
   <project path="vendor/google/overlays/ThemeIcons" name="Mist-OS-Staging/vendor_google_overlays_ThemeIcons" remote="staging" />
   <project path="vendor/bcr" name="Mist-OS-Staging/vendor_bcr" remote="staging" />
