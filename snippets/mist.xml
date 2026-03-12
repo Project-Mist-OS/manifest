@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="mist"
+           fetch="https://github.com/"
+           sync-c="true"
+           sync-j="4"
+           revision="refs/heads/16.2" />
+
+  <remote  name="mist-codeberg"
+           fetch="https://codeberg.org/Zabuka"
+           sync-c="true"
+           sync-j="4"
+           depth="1"
+           revision="refs/heads/16.2-test" />
+
+  <remote  name="mist-device"
+           fetch="https://github.com/MistOS-Devices"
+           sync-c="true"
+           sync-j="4"
+           revision="refs/heads/16" />
+
+  <!-- Infrastructure -->
+  <project path="manifest" name="Project-Mist-OS/manifest" remote="mist" />
+
+  <project path="build/make" name="Project-Mist-OS/build" groups="pdk,sysui-studio" remote="mist" >
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+
+  <project path="build/soong" name="Project-Mist-OS/build_soong" groups="pdk,tradefed,sysui-studio" remote="mist" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+
+  <project path="art" name="Project-Mist-OS/art" groups="pdk" remote="mist" />
+
+  <project path="bionic" name="Project-Mist-OS/bionic" groups="pdk" remote="mist" />
+
+  <project path="bootable/recovery" name="Project-Mist-OS/bootable_recovery" groups="pdk" remote="mist" />
+
+  <project path="device/lineage/sepolicy" name="Project-Mist-OS/device_lineage_sepolicy" remote="mist" />
+
+  <project path="external/arm-optimized-routines" name="Project-Mist-OS/external_arm-optimized-routines" groups="pdk" remote="mist" />
+  <project path="external/bouncycastle" name="Project-Mist-OS/external_bouncycastle" groups="pdk" remote="mist" />
+  <project path="external/FadingEdgeLayout" name="Project-Mist-OS/external_FadingEdgeLayout" remote="mist" />
+  <project path="external/jemalloc_new" name="Project-Mist-OS/external_jemalloc_new" groups="pdk" remote="mist" />
+
+  <project path="frameworks/av" name="Project-Mist-OS/frameworks_av" groups="pdk,sysui-studio" remote="mist" />
+  <project path="frameworks/base" name="Project-Mist-OS/frameworks_base_qpr2" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" />
+  <project path="frameworks/libs/systemui" name="Project-Mist-OS/frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" />
+  <project path="frameworks/native" name="Project-Mist-OS/frameworks_native" groups="pdk" remote="mist" />
+  <project path="frameworks/opt/net/wifi" name="Project-Mist-OS/frameworks_opt_net_wifi" groups="pdk,sysui-studio" remote="mist" />
+  <project path="frameworks/opt/telephony" name="Project-Mist-OS/frameworks_opt_telephony" groups="pdk,sysui-studio" remote="mist" />
+
+  <project path="hardware/interfaces" name="Project-Mist-OS/hardware_interfaces" groups="pdk,sysui-studio" remote="mist" />
+
+  <project path="hardware/qcom-caf/sm8450/display" name="Project-Mist-OS/hardware_qcom_display" groups="qcom" revision="16.2-sm8450" />
+
+  <project path="kernel/configs" name="Project-Mist-OS/kernel_configs" groups="vts,pdk" remote="mist" />
+
+  <project path="lineage-sdk" name="Project-Mist-OS/lineage-sdk" remote="mist" />
+  <project path="libcore" name="Project-Mist-OS/libcore" groups="pdk" remote="mist" />
+  
+  <project path="mist-maintainers" name="mist-maintainers" remote="mist-device" />
+
+  <project path="packages/apps/ColumbusService" name="Project-Mist-OS/packages_apps_ColumbusService" remote="mist" />
+  <project path="packages/apps/Mistify" name="Project-Mist-OS/packages_apps_Mistify" remote="mist" />
+  <project path="packages/apps/DeskClock" name="Project-Mist-OS/packages_apps_DeskClock" groups="pdk-fs" remote="mist" />
+  <project path="packages/apps/Dialer" name="Project-Mist-OS/packages_apps_Dialer" groups="pdk-fs" remote="mist" />
+  <project path="packages/apps/DocumentsUI" name="Project-Mist-OS/packages_apps_DocumentsUI" groups="pdk-cw-fs,pdk-fs" remote="mist" />
+  <project path="packages/apps/FaceUnlock" name="Project-Mist-OS/packages_apps_FaceUnlock" remote="mist" />
+  <project path="packages/apps/GameSpace" name="Project-Mist-OS/packages_apps_GameSpace" remote="mist" />
+  <project path="packages/apps/Launcher3" name="Project-Mist-OS/packages_apps_Launcher3" groups="pdk-fs,sysui-studio,pdk-cw-tvc" remote="mist" />
+  <project path="packages/apps/LineageParts" name="Project-Mist-OS/packages_apps_LineageParts" remote="mist" />
+  <project path="packages/apps/LMOFreeform" name="Project-Mist-OS/packages_apps_LMOFreeform" remote="mist" />
+  <project path="packages/apps/Matlog" name="Project-Mist-OS/packages_apps_Matlog" remote="mist" />
+  <project path="packages/apps/Messaging" name="Project-Mist-OS/packages_apps_Messaging" groups="pdk-fs" remote="mist" />
+  <project path="packages/apps/OmniStyle" name="Project-Mist-OS/packages_apps_OmniStyle" remote="mist" />
+  <project path="packages/apps/Settings" name="Project-Mist-OS/packages_apps_Settings_new" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="mist" />
+  <project path="packages/apps/SettingsIntelligence" name="Project-Mist-OS/packages_apps_SettingsIntelligence" groups="pdk-fs" remote="mist" />
+  <project path="packages/apps/SetupWizard" name="Project-Mist-OS/packages_apps_SetupWizard" remote="mist" />
+  <project path="packages/apps/ThemePicker" name="Project-Mist-OS/packages_apps_ThemePicker" groups="pdk-fs,sysui-studio" remote="mist" />
+  <project path="packages/apps/Updater" name="Project-Mist-OS/packages_apps_Updater" remote="mist" />
+  <project path="packages/apps/WallpaperPicker2" name="Project-Mist-OS/packages_apps_WallpaperPicker2" groups="pdk-fs,sysui-studio" remote="mist" />
+  <project path="packages/inputmethods/LatinIME" name="Project-Mist-OS/packages_inputmethods_LatinIME" groups="pdk-fs" remote="mist" />
+  <project path="packages/modules/Bluetooth" name="Project-Mist-OS/packages_modules_Bluetooth" groups="pdk" remote="mist" />
+  <project path="packages/modules/Connectivity" name="Project-Mist-OS/packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="mist" />
+  <project path="packages/modules/Permission" name="Project-Mist-OS/packages_modules_Permission" groups="pdk-cw-fs,pdk-fs" remote="mist" />
+  <project path="packages/modules/Wifi" name="Project-Mist-OS/packages_modules_Wifi" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" />
+  <project path="packages/services/DeviceAsWebcam" name="Project-Mist-OS/packages_services_DeviceAsWebcam" groups="pdk-cw-fs,pdk-fs" remote="mist" />
+  <project path="packages/services/OmniJaws" name="Project-Mist-OS/packages_services_OmniJaws" remote="mist" />
+  <project path="packages/services/Telecomm" name="Project-Mist-OS/packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="mist" />
+  <project path="packages/services/Telephony" name="Project-Mist-OS/packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="mist" />
+
+  <project path="system/core" name="Project-Mist-OS/system_core_new" groups="pdk" remote="mist" />
+  <project path="system/sepolicy" name="Project-Mist-OS/system_sepolicy" groups="pdk" remote="mist" />
+  <project path="system/memory/libmeminfo" name="Project-Mist-OS/system_memory_libmeminfo" groups="pdk" remote="mist" />
+  <project path="system/update_engine" name="Project-Mist-OS/system_update_engine" groups="pdk" remote="mist" />
+  <project path="system/vold" name="Project-Mist-OS/system_vold" groups="pdk" remote="mist" />
+
+  <project path="vendor/extras" name="Project-Mist-OS/vendor_extras" remote="mist" />
+  <project path="vendor/certification" name="Project-Mist-OS/vendor_certification" remote="mist" />
+  <project path="vendor/lineage" name="Project-Mist-OS/vendor_mist" remote="mist"/>
+  <project path="vendor/pixel-style" name="Project-Mist-OS/vendor_pixel-style" remote="mist" />
+  <project path="vendor/gms" name="vendor_gms" remote="mist-codeberg" />
+  <project path="vendor/google/overlays/ThemeIcons" name="Project-Mist-OS/vendor_google_overlays_ThemeIcons" remote="mist" />
+  <project path="vendor/bcr" name="Project-Mist-OS/vendor_bcr" remote="mist" />
+</manifest>
