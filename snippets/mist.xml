@@ -19,6 +19,27 @@
            sync-c="true"
            sync-j="4"
            revision="refs/heads/16" />
+  
+  <remote  name="github-non-los"
+           sync-c="true"
+           sync-j="4"
+           fetch="https://github.com" />
+
+  <remote  name="gitlab"
+           sync-c="true"
+           sync-j="4"
+           fetch="https://gitlab.com" />
+  
+<remote  name="codeberg"
+           fetch="https://codeberg.org"
+           sync-c="true"
+           sync-j="4"
+           />
+<remote  name="gitea"
+           sync-c="true"
+           sync-j="4"
+           fetch="https://gitea.com" />
+
 
   <!-- Infrastructure -->
   <project path="manifest" name="Project-Mist-OS/manifest" remote="mist" />
