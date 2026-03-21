@@ -123,6 +123,7 @@
   <project path="system/memory/libmeminfo" name="Project-Mist-OS/system_memory_libmeminfo" groups="pdk" remote="mist" />
   <project path="system/update_engine" name="Project-Mist-OS/system_update_engine" groups="pdk" remote="mist" />
   <project path="system/vold" name="Project-Mist-OS/system_vold" groups="pdk" remote="mist" />
+  <project path="system/media" name="Project-Mist-OS/system_media" groups="pdk" remote="mist" />
 
   <project path="vendor/extras" name="Project-Mist-OS/vendor_extras" remote="mist" />
   <project path="vendor/certification" name="Project-Mist-OS/vendor_certification" remote="mist" />
