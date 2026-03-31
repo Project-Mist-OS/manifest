@@ -49,7 +49,7 @@
   <project path="device/generic/arm64" name="device/generic/arm64" groups="pdk" remote="aosp" />
   <project path="device/generic/armv7-a-neon" name="device/generic/armv7-a-neon" groups="pdk" remote="aosp" />
   <project path="device/generic/art" name="device/generic/art" groups="pdk" remote="aosp" />
-  <project path="device/generic/car" name="device/generic/car" groups="pdk" remote="aosp" />
+  <project path="device/generic/car" name="LineageOS/android_device_generic_car" groups="pdk" />
   <project path="device/generic/common" name="LineageOS/android_device_generic_common" groups="pdk" />
   <project path="device/generic/goldfish" name="LineageOS/android_device_generic_goldfish" groups="pdk" />
   <project path="device/generic/trusty" name="device/generic/trusty" groups="pdk" remote="aosp" />
@@ -698,7 +698,7 @@
   <project path="packages/apps/Car/Notification" name="platform/packages/apps/Car/Notification" groups="pdk-fs" remote="aosp" />
   <project path="packages/apps/Car/Provision" name="platform/packages/apps/Car/Provision" groups="pdk-fs" remote="aosp" />
   <project path="packages/apps/Car/RadioPrebuilt" name="platform/packages/apps/Car/RadioPrebuilt" groups="pdk-fs" clone-depth="1" remote="aosp" />
-  <project path="packages/apps/Car/References" name="platform/packages/apps/Car/References" groups="pdk-fs" remote="aosp" />
+  <project path="packages/apps/Car/References" name="LineageOS/android_packages_apps_Car_References" groups="pdk-fs" />
   <project path="packages/apps/Car/RotaryController" name="platform/packages/apps/Car/RotaryController" groups="pdk-fs" remote="aosp" />
   <project path="packages/apps/Car/RotaryImePrebuilt" name="platform/packages/apps/Car/RotaryImePrebuilt" groups="pdk-fs" clone-depth="1" remote="aosp" />
   <project path="packages/apps/Car/Settings" name="LineageOS/android_packages_apps_Car_Settings" groups="pdk-fs,pdk-cw-tvc" />
@@ -923,7 +923,7 @@
   <project path="system/libziparchive" name="LineageOS/android_system_libziparchive" groups="pdk" />
   <project path="system/linkerconfig" name="platform/system/linkerconfig" groups="pdk" remote="aosp" />
   <project path="system/logging" name="LineageOS/android_system_logging" groups="pdk" />
-  <!--<project path="system/media" name="LineageOS/android_system_media" groups="pdk" />-->
+  <project path="system/media" name="LineageOS/android_system_media" groups="pdk" />
   <project path="system/memory/libion" name="platform/system/memory/libion" groups="pdk" remote="aosp" />
   <project path="system/memory/libdmabufheap" name="platform/system/memory/libdmabufheap" groups="pdk" remote="aosp" />
   <!--<project path="system/memory/libmeminfo" name="platform/system/memory/libmeminfo" groups="pdk" remote="aosp" />-->
@@ -969,7 +969,7 @@
   <project path="test/vts-testcase/performance" name="platform/test/vts-testcase/performance" groups="vts,projectarch,pdk" remote="aosp" />
   <project path="test/vts-testcase/security" name="platform/test/vts-testcase/security" groups="vts,projectarch,pdk" remote="aosp" />
   <project path="test/vts-testcase/vndk" name="platform/test/vts-testcase/vndk" groups="vts,pdk" remote="aosp" />
-  <project path="toolchain/pgo-profiles" name="toolchain/pgo-profiles" groups="pdk" clone-depth="1" remote="aosp" />
+  <!--<project path="toolchain/pgo-profiles" name="toolchain/pgo-profiles" groups="pdk" clone-depth="1" remote="aosp" />-->
   <project path="tools/aadevtools" name="platform/tools/aadevtools" groups="pdk" remote="aosp" />
   <project path="tools/acloud" name="platform/tools/acloud" groups="tools,vts,projectarch,pdk,tradefed" remote="aosp" />
   <project path="tools/apifinder" name="platform/tools/apifinder" groups="pdk,tools" remote="aosp" />
