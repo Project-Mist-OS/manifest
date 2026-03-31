@@ -48,7 +48,7 @@
 
 
   <!-- Infrastructure -->
-  <project path="manifest" name="Mist-OS-Staging/manifest" remote="staging" />
+  <project path="manifest" name="Mist-OS-Staging/manifest" remote="staging" revision="16.2" />
 
   <project path="build/make" name="Mist-OS-Staging/build" groups="pdk,sysui-studio" remote="staging" >
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
@@ -124,7 +124,7 @@
   <project path="packages/services/Telecomm" name="Mist-OS-Staging/packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="staging" />
   <project path="packages/services/Telephony" name="Mist-OS-Staging/packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="staging" />
 
-  <project path="toolchain/pgo-profiles" name="Lunaris-AOSP/toolchain_pgo-profiles" groups="pdk" clone-depth="1" remote="staging" />
+  <project path="toolchain/pgo-profiles" name="Mist-OS-Staging/toolchain_pgo-profiles" groups="pdk" clone-depth="1" remote="staging" />
 
   <project path="system/core" name="Mist-OS-Staging/system_core_new" groups="pdk" remote="staging" />
   <project path="system/sepolicy" name="Mist-OS-Staging/system_sepolicy" groups="pdk" remote="staging" />
