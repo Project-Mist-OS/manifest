@@ -70,7 +70,7 @@
 
   <project path="bootable/recovery" name="Project-Mist-OS/bootable_recovery" groups="pdk" remote="mist" />
 
-  <project path="device/lineage/sepolicy" name="Project-Mist-OS/device_lineage_sepolicy" remote="staging" revision="4.6" />
+  <project path="device/lineage/sepolicy" name="Mist-OS-Staging/device_lineage_sepolicy" remote="staging" revision="4.6" />
 
   <project path="external/arm-optimized-routines" name="Project-Mist-OS/external_arm-optimized-routines" groups="pdk" remote="mist" />
   <project path="external/bouncycastle" name="Project-Mist-OS/external_bouncycastle" groups="pdk" remote="mist" />
