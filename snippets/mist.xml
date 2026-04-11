@@ -8,7 +8,7 @@
            revision="refs/heads/16.2" />
 
   <remote  name="staging"
-           fetch="https://github.com/Mist-OS-Staging"
+           fetch="https://github.com/"
            sync-c="true"
            sync-j="4"
            revision="refs/heads/16.2" />
