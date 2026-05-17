@@ -101,6 +101,7 @@
   <project path="packages/apps/Matlog" name="packages_apps_Matlog" remote="mist" />
   <project path="packages/apps/Messaging" name="packages_apps_Messaging" groups="pdk-fs" remote="mist" />
   <project path="packages/apps/OmniStyle" name="packages_apps_OmniStyle" remote="mist" />
+  <project path="packages/apps/Sandbox" name="packages_apps_Sandbox" remote="mist" />
   <project path="packages/apps/Settings" name="packages_apps_Settings_new" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="mist" />
   <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" groups="pdk-fs" remote="mist" />
   <project path="packages/apps/SetupWizard" name="packages_apps_SetupWizard" remote="mist" />
