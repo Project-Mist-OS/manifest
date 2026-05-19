@@ -1,12 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <remote  name="mist"
-           fetch="https://github.com/Mist-OS-Staging"
-           sync-c="true"
-           sync-j="4"
-           revision="refs/heads/16.3" />
-
   <remote  name="mist-codeberg"
            fetch="https://codeberg.org/Zabuka"
            sync-c="true"
@@ -38,7 +32,7 @@
 
 
   <!-- Infrastructure -->
-  <project path="manifest" name="manifest" remote="mist" revision="16.3" />
+  <project path="manifest" name="manifest" remote="mist" />
 
   <project path="build/make" name="build" groups="pdk,sysui-studio" remote="mist" >
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
@@ -68,7 +62,7 @@
   <project path="external/jemalloc_new" name="external_jemalloc_new" groups="pdk" remote="mist" />
 
   <project path="frameworks/av" name="frameworks_av" groups="pdk,sysui-studio" remote="mist" />
-  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" revision="16.3-test" />
+  <project path="frameworks/base" name="frameworks_base_qpr2" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" />
   <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" />
   <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="mist" />
   <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" groups="pdk,sysui-studio" remote="mist" />
@@ -88,8 +82,9 @@
 
   <project path="packages/apps/AppLocker" name="packages_apps_AppLocker" remote="mist" />
   <project path="packages/apps/AxThemeStore" name="packages_apps_AxThemeStore" remote="mist" />
+  <project path="packages/apps/AxWallpaperEffects" name="packages_apps_AxWallpaperEffects" remote="mist" />
   <project path="packages/apps/ColumbusService" name="packages_apps_ColumbusService" remote="mist" />
-  <project path="packages/apps/Mistify" name="packages_apps_Mistify_priv" remote="mist" />
+  <project path="packages/apps/Mistify" name="packages_apps_Mistify" remote="mist" />
   <project path="packages/apps/DeskClock" name="packages_apps_DeskClock" groups="pdk-fs" remote="mist" />
   <project path="packages/apps/Dialer" name="packages_apps_Dialer" groups="pdk-fs" remote="mist" />
   <project path="packages/apps/DocumentsUI" name="packages_apps_DocumentsUI" groups="pdk-cw-fs,pdk-fs" remote="mist" />
