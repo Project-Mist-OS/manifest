@@ -30,7 +30,11 @@
             sync-j="4"
             fetch="https://gitea.com" />
 
-
+  <remote  name="github"
+            sync-c="true"
+            sync-j="4"
+            fetch="https://github.com" />
+  
   <!-- Infrastructure -->
   <project path="manifest" name="manifest" remote="mist" />
 
