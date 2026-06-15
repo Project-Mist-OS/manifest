@@ -89,6 +89,11 @@ ro.mist.device.name=Poco X3
 TARGET_DEFAULT_PIXEL_LAUNCHER := true [if you want to ship default pixel launcher.]
 Only with GMS build.
 ```
+## ** X Reality Engine**
+> 💡 **Note**: careful with mtk, causes display stuck issue
+```
+USE_REALITY_ENGINE := true
+```
 
 ## 📝 **Build Example**
 
