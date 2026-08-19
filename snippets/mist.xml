@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <remote  name="mist"
+           fetch="https://github.com/Project-Mist-OS/"
+           sync-c="true"
+           sync-j="4"
+           revision="refs/heads/17.0" />
+
+  <remote  name="mist-device"
+           fetch="https://github.com/MistOS-Devices"
+           sync-c="true"
+           sync-j="4"
+           revision="refs/heads/17" />
+
+  <remote  name="codeberg"
+           fetch="https://codeberg.org/Zabuka"
+           sync-c="true"
+           sync-j="4"
+           depth="1"
+           revision="refs/heads/v1" />
+
+  <remote  name="github-non-los"
+           sync-c="true"
+           sync-j="4"
+           fetch="https://github.com" />
+
+  <remote  name="gitlab"
+           sync-c="true"
+           sync-j="4"
+           fetch="https://gitlab.com" />
+
+  <!-- Art -->
+  <project path="art" name="art" groups="pdk" remote="mist" />
+
+  <!-- Bionic -->
+  <project path="bionic" name="bionic" groups="pdk" remote="mist" />
+
+  <!-- Bootable -->
+  <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="mist" />
+
+  <!-- Build -->
+  <project path="build/make" name="build" groups="pdk,sysui-studio" remote="mist" >
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="mist" />
+
+  <!-- External -->
+  <project path="external/FadingEdgeLayout" name="external_FadingEdgeLayout" remote="mist" />
+  <project path="external/bouncycastle" name="external_bouncycastle" remote="mist" />
+  <project path="external/dng_sdk" name="external_dng_sdk" groups="pdk" remote="mist"/>
+  <project path="external/libjxl" name="external_libjxl" groups="pdk" remote="mist"/>
+  <project path="external/piex" name="external_piex" groups="pdk" remote="mist" />
+  <project path="external/wpa_supplicant_8" name="external_wpa_supplicant_8" remote="mist" />
+  <project path="external/v4l2_codec2" name="external_v4l2_codec2" groups="pdk" remote="mist" />
+
+  <!-- Frameworks -->
+  <project path="frameworks/av" name="frameworks_av" groups="pdk,sysui-studio" remote="mist" />
+  <project path="frameworks/base" name="frameworks_base_qpr2" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" />
+  <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="mist" />
+  <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" groups="pdk,sysui-studio" remote="mist" />
+  <project path="frameworks/opt/telephony" name="frameworks_opt_telephony" groups="pdk,sysui-studio" remote="mist" />
+
+  <!-- Hardware -->
+  <project path="hardware/broadcom/libbt" name="hardware_broadcom_libbt" groups="pdk" remote="mist" />
+  <project path="hardware/google/pixel" name="hardware_google_pixel" groups="generic_fs,pixel,pdk-gs-arm,pdk-gs-imgtec,pdk-desktop" remote="mist" />
+  <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk,sysui-studio" remote="mist" />
+  <project path="hardware/lineage/compat" name="hardware_lineage_compat" remote="mist" />
+  <project path="hardware/qcom/wlan" name="hardware_qcom_wlan" groups="qcom,qcom_wlan,pdk-qcom" remote="mist" />
+
+  <!-- Infrastructure -->
+  <project path="mist/manifest" name="manifest" remote="mist" />
+  <project path="mist-maintainers" name="mist-maintainers" remote="mist-device" />
+
+  <!-- Kernel -->
+  <project path="kernel/configs" name="kernel_configs" groups="vts,pdk" remote="mist" />
+
+  <!-- Libcore -->
+  <project path="libcore" name="libcore" groups="pdk,sysui-studio" remote="mist" />
+
+  <!-- LineageOS additions -->
+  <project path="lineage-sdk" name="lineage-sdk" remote="mist" />
+  <project path="axion-sdk" name="axion-sdk" remote="mist" />
+
+  <!-- Packages -->
+  <project path="packages/apps/AppLocker" name="packages_apps_AppLocker" remote="mist" />
+  <project path="packages/apps/BtHelper" name="TheParasiteProject/packages_apps_BtHelper" revision="main" remote="github-non-los" />
+  <project path="packages/apps/ColumbusService" name="packages_apps_ColumbusService" remote="mist" />
+  <project path="packages/apps/Mistify" name="packages_apps_Mistify" remote="mist" />
+  <project path="packages/apps/FaceUnlock" name="packages_apps_FaceUnlock" remote="mist" />
+  <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="mist" />
+  <project path="packages/apps/LMOFreeform" name="packages_apps_LMOFreeform" remote="mist" />
+  <project path="packages/apps/LineageParts" name="packages_apps_LineageParts" remote="mist" />
+  <project path="packages/apps/OmniStyle" name="packages_apps_OmniStyle" remote="mist" />
+  <project path="packages/apps/Sandbox" name="packages_apps_Sandbox" remote="mist" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings_new" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="mist" />
+  <project path="packages/apps/SettingsIntelligence" name="packages_apps_SettingsIntelligence" groups="pdk-fs" remote="mist" />
+  <project path="packages/apps/SetupWizard" name="packages_apps_SetupWizard" remote="mist" />
+  <project path="packages/apps/Stk" name="packages_apps_Stk" groups="apps_stk,pdk-fs" remote="mist" />
+  <project path="packages/apps/Updater" name="packages_apps_Updater" remote="mist" />
+  <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" groups="pdk-fs,sysui-studio" remote="mist" />
+  <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk" remote="mist" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="mist" />
+  <project path="packages/modules/Permission" name="packages_modules_Permission" groups="pdk-cw-fs,pdk-fs" remote="mist" />
+  <project path="packages/modules/Wifi" name="packages_modules_Wifi" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" />
+  <project path="packages/providers/DownloadProvider" name="packages_providers_DownloadProvider" groups="pdk-cw-fs,pdk-fs" remote="mist" />
+  <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" remote="mist" />  
+  <project path="packages/services/AxQuickLook" name="packages_services_AxQuickLook" remote="mist" />
+  <project path="packages/services/OmniJaws" name="packages_services_OmniJaws" remote="mist" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" remote="mist" />
+  <project path="packages/services/Telephony" name="packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" remote="mist" />
+
+  <!-- Sepolicy -->
+  <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="mist" />
+  <project path="device/qcom/sepolicy-legacy-um" name="device_qcom_sepolicy" groups="qcom,sdm660" remote="mist" revision="17.0-legacy-um" />
+
+  <!-- System -->
+  <project path="system/bpf" name="system_bpf" groups="pdk" remote="mist" />
+  <project path="system/chre" name="system_chre" groups="pdk" remote="mist" />
+  <project path="system/core" name="system_core_new" groups="pdk" remote="mist" />
+  <project path="system/extras" name="system_extras" groups="pdk" remote="mist" />
+  <project path="system/fs/fs_mgr" name="system_fs_fs_mgr" groups="pdk" remote="mist" />
+  <project path="system/libhwbinder" name="system_libhwbinder" groups="pdk" remote="mist" />
+  <project path="system/media" name="system_media" groups="pdk" remote="mist" />
+  <project path="system/memory/libdmabufheap" name="system_memory_libdmabufheap" groups="pdk" remote="mist" />
+  <project path="system/memory/libion" name="system_memory_libion" groups="pdk" remote="mist" />
+  <project path="system/memory/libmeminfo" name="system_memory_libmeminfo" groups="pdk" remote="mist" />
+  <project path="system/netd" name="system_netd" groups="pdk" remote="mist" />
+  <project path="system/security" name="system_security" groups="pdk" remote="mist" />
+  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="mist" />
+  <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="mist" />
+  <project path="system/vold" name="system_vold" groups="pdk" remote="mist" />
+
+  <!-- Vendor -->
+  <project path="vendor/extras" name="vendor_extras" remote="mist" />
+  <project path="vendor/google/overlays/ThemeIcons" name="vendor_google_overlays_ThemeIcons" remote="mist" />
+  <project path="vendor/gms" name="vendor_gms" remote="codeberg" clone-depth="1" />
+  <project path="vendor/gms-mosey" name="vendor_gms-mosey" remote="mist" />
+  <project path="vendor/lineage" name="vendor_mist" remote="mist" />
+  <project path="vendor/pixel-style" name="vendor_pixel-style" remote="mist" />
+</manifest>
