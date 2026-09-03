@@ -128,7 +128,6 @@
   <project path="system/fs/fs_mgr" name="system_fs_fs_mgr" groups="pdk" remote="mist" />
   <project path="system/libhwbinder" name="system_libhwbinder" groups="pdk" remote="mist" />
   <project path="system/media" name="system_media" groups="pdk" remote="mist" />
-  <project path="system/memory/libdmabufheap" name="system_memory_libdmabufheap" groups="pdk" remote="mist" />
   <project path="system/memory/libion" name="system_memory_libion" groups="pdk" remote="mist" />
   <project path="system/memory/libmeminfo" name="system_memory_libmeminfo" groups="pdk" remote="mist" />
   <project path="system/netd" name="system_netd" groups="pdk" remote="mist" />
