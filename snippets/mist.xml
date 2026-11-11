@@ -53,11 +53,14 @@
   <!-- External -->
   <project path="external/FadingEdgeLayout" name="external_FadingEdgeLayout" remote="mist" />
   <project path="external/bouncycastle" name="external_bouncycastle" remote="mist" />
+  <project path="external/libpng" name="external_libpng" groups="pdk" remote="mist" />
+  <project path="external/pffft" name="external_pffft" groups="pdk" remote="mist" />
   <project path="external/piex" name="external_piex" groups="pdk" remote="mist" />
+  <project path="external/steam-audio" name="external_steam-audio" remote="mist" />
 
   <!-- Frameworks -->
   <project path="frameworks/av" name="frameworks_av" groups="pdk,sysui-studio" remote="mist" />
-  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" />
+  <project path="frameworks/base" name="yusufnoor786/frameworks_base-17" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="gitlab"  revision="oneui-collapsing-toolbar" />
   <project path="frameworks/libs/systemui" name="frameworks_libs_systemui" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" />
   <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="mist" />
   <project path="frameworks/opt/net/wifi" name="frameworks_opt_net_wifi" groups="pdk,sysui-studio" remote="mist" />
@@ -67,6 +70,9 @@
   <project path="hardware/google/pixel" name="hardware_google_pixel" groups="generic_fs,pixel,pdk-gs-arm,pdk-gs-imgtec,pdk-desktop" remote="mist" />
   <project path="hardware/interfaces" name="hardware_interfaces" groups="pdk,sysui-studio" remote="mist" />
   <project path="hardware/lineage/compat" name="hardware_lineage_compat" remote="mist" />
+  <project path="hardware/qcom-caf/sm8150/display" name="hardware_qcom_display" groups="qcom" remote="mist" revision="17.0-caf-sm8150" />
+  <project path="hardware/qcom-caf/sm8450-6.6/audio/primary-hal" name="hardware_qcom_audio-ar" groups="qcom,waipio-6.6-vendor" remote="mist" revision="17.0-caf-sm8450-6.6" />
+  <project path="hardware/qcom-caf/sm8450-6.6/display/hal" name="hardware_qcom_display" groups="qcom" remote="mist" revision="17.0-caf-sm8450-6.6" />
 
   <!-- Infrastructure -->
   <project path="mist/manifest" name="manifest" remote="mist" revision="17" />
@@ -75,9 +81,6 @@
   <!-- Kernel -->
   <project path="kernel/configs" name="kernel_configs" groups="vts,pdk" remote="mist" />
 
-  <!-- Libcore -->
-  <project path="libcore" name="libcore" groups="pdk,sysui-studio" remote="mist" />
-
   <!-- LineageOS additions -->
   <project path="lineage-sdk" name="lineage-sdk" remote="mist" />
 
@@ -85,23 +88,25 @@
   <project path="packages/apps/AppLocker" name="packages_apps_AppLocker" remote="mist" />
   <project path="packages/apps/BtHelper" name="TheParasiteProject/packages_apps_BtHelper" revision="main" remote="github-non-los" />
   <project path="packages/apps/ColumbusService" name="packages_apps_ColumbusService" remote="mist" />
-  <project path="packages/apps/Mistify" name="packages_apps_Mistify" remote="mist" />
+  <project path="packages/apps/Mistify" name="yusufnoor786/packages_apps_Mistify" remote="gitlab" revision="hyperos-graffiti-clock" />
   <project path="packages/apps/FaceUnlock" name="packages_apps_FaceUnlock" remote="mist" />
   <project path="packages/apps/GameSpace" name="packages_apps_GameSpace" remote="mist" />
   <project path="packages/apps/LMOFreeform" name="packages_apps_LMOFreeform" remote="mist" />
   <project path="packages/apps/LineageParts" name="packages_apps_LineageParts" remote="mist" />
-  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="mist" />
+  <project path="packages/apps/Launcher3" name="packages_apps_Launcher3" remote="mist" revision="17-next" />
   <project path="packages/apps/OmniStyle" name="packages_apps_OmniStyle" remote="mist" />
   <project path="packages/apps/Sandbox" name="packages_apps_Sandbox" remote="mist" />
-  <project path="packages/apps/Settings" name="packages_apps_Settings_new" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="mist" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings_new" groups="pdk-fs,pdk-cw-tvc,sysui-studio" remote="mist" revision="settings-compose-scrollbar-focus-ring" />
   <project path="packages/apps/SetupWizard" name="packages_apps_SetupWizard" remote="mist" />
   <project path="packages/apps/Stk" name="packages_apps_Stk" groups="apps_stk,pdk-fs" remote="mist" />
+  <project path="packages/apps/SystemUIClocks" name="packages_apps_SystemUIClocks" remote="mist" />
   <project path="packages/apps/Updater" name="packages_apps_Updater" remote="mist" />
   <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" groups="pdk-fs,sysui-studio" remote="mist" />
   <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk" remote="mist" />
   <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk-cw-fs,pdk-fs" remote="mist" />
   <project path="packages/modules/Permission" name="packages_modules_Permission" groups="pdk-cw-fs,pdk-fs" remote="mist" />
   <project path="packages/modules/Wifi" name="packages_modules_Wifi" groups="pdk-cw-fs,pdk-fs,sysui-studio" remote="mist" />
+  <project path="packages/modules/common" name="packages_modules_common" groups="pdk-cw-fs,pdk-fs" remote="mist" />
   <project path="packages/providers/MediaProvider" name="packages_providers_MediaProvider" groups="pdk-cw-fs,pdk-fs" remote="mist" />  
   <project path="packages/providers/TelephonyProvider" name="packages_providers_TelephonyProvider" groups="pdk-cw-fs,pdk-fs" remote="mist" />
   <project path="packages/resources/apps" name="packages_resources_apps" remote="mist" />
@@ -118,15 +123,15 @@
   <project path="system/fs/fs_mgr" name="system_fs_fs_mgr" groups="pdk" remote="mist" />
   <project path="system/libhwbinder" name="system_libhwbinder" groups="pdk" remote="mist" />
   <project path="system/media" name="system_media" groups="pdk" remote="mist" />
-  <project path="system/memory/libdmabufheap" name="system_memory_libdmabufheap" groups="pdk" remote="mist" />
   <project path="system/memory/libmeminfo" name="system_memory_libmeminfo" groups="pdk" remote="mist" />
+  <project path="system/netd" name="system_netd" groups="pdk" remote="mist" />  
   <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="mist" />
   <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="mist" />
   <project path="system/vold" name="system_vold" groups="pdk" remote="mist" />
 
   <!-- Vendor -->
   <project path="vendor/extras" name="vendor_extras" remote="mist" />
-  <project path="vendor/google/overlays/ThemeIcons" name="vendor_google_overlays_ThemeIcons" remote="mist" />
+   <project path="vendor/google/overlays/ThemeIcons" name="vendor_google_overlays_ThemeIcons" remote="mist" />
   <project path="vendor/gms" name="vendor_gms" remote="codeberg" clone-depth="1" />
   <project path="vendor/gms-mosey" name="vendor_gms-mosey" remote="mist" />
   <project path="vendor/lineage" name="vendor_mist" remote="mist" />
