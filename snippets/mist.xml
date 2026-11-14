@@ -100,6 +100,7 @@
   <project path="packages/apps/SetupWizard" name="packages_apps_SetupWizard" remote="mist" />
   <project path="packages/apps/Stk" name="packages_apps_Stk" groups="apps_stk,pdk-fs" remote="mist" />
   <project path="packages/apps/SystemUIClocks" name="packages_apps_SystemUIClocks" remote="mist" />
+  <project path="packages/apps/Twelve" name="yusufnoor786/packages_apps_Twelve" revision="17" remote="github-non-los" />
   <project path="packages/apps/Updater" name="packages_apps_Updater" remote="mist" />
   <project path="packages/apps/WallpaperPicker2" name="packages_apps_WallpaperPicker2" groups="pdk-fs,sysui-studio" remote="mist" />
   <project path="packages/modules/Bluetooth" name="packages_modules_Bluetooth" groups="pdk" remote="mist" />
